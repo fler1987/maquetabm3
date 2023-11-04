@@ -1,0 +1,17 @@
+﻿[
+  {
+    "producto": "KTM Duke 250 2022",
+    "categoria": "Motos",
+    "imagen": "assets/images/producto.png"
+  },
+  {
+    "producto": "KTM RC 390 2022",
+    "categoria": "Motos",
+    "imagen": "assets/images/producto.png"
+  },
+  {
+    "producto": "KTM Duke 200 2023",
+    "categoria": "Motos",
+    "imagen": "assets/images/producto.png"
+  }
+]
