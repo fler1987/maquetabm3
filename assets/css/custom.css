@@ -1,0 +1,33 @@
+﻿.block-product .image-box
+{
+    display: block;
+    max-width: 90px;
+    max-height: 75px;
+    min-height: 75px;
+    margin: 0 auto;
+}
+
+    .block-product .image-box.icon-galon
+    {
+        max-width: 55px;
+    }
+
+    .block-product .image-box.icon-cilindrada
+    {
+        max-width: 80px;
+    }
+
+    .block-product .image-box.icon-velocidad
+    {
+        max-width: 62px;
+    }
+
+    .block-product .image-box.icon-potencia
+    {
+        max-width: 55px;
+    }
+
+    .block-product .image-box.icon-torque
+    {
+        max-width: 55px;
+    }
