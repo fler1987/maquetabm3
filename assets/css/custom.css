@@ -31,3 +31,40 @@
     {
         max-width: 55px;
     }
+
+.block-brand .wrapper-item {
+    margin: 5px 0 !important;
+}
+
+.block-banner-full .content-box-info {    
+    margin-top: 150px !important;
+}
+
+
+.block-section .block-header {   
+    margin-bottom: 30px !important;
+}
+
+.slick-arrow { 
+    top: 30% !important; 
+}
+
+.button.button-whatsapp-servicio-tecnico {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #222831;
+    padding: 15px;
+}
+
+.button.button-whatsapp-servicio-tecnico i {
+    border-color: #25d366;
+    color: #25d366;
+}
+
+.breadcrumb > a.bread-text {
+    font-size: 11px !important;
+}
+
+.breadcrumb > span.bread-text {    
+    font-size: 11px;
+}
