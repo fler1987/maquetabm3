@@ -60,6 +60,62 @@
         }
     });
 
+    $('.select-bm3').each(function () {
+        var $this = $(this),
+          numberOfOptions = $(this).children('option').length;
+
+        $this.addClass('custom-select-hidden');
+        $this.wrap('<div class="custom-select"></div>');
+        $this.after('<div class="custom-select-selection"></div>');
+
+        var $customSelection = $this.next('div.custom-select-selection');
+        $customSelection.text($this.children('option').eq(0).text());
+
+        var $list = $('<ul />', {
+            'class': 'custom-select-option'
+        }).insertAfter($customSelection);
+
+        for (var i = 0; i < numberOfOptions; i++) {
+            console.log($this.children('option').eq(i).attr("class"));
+
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                value: $this.children('option').eq(i).val(),
+                class: $this.children('option').eq(i).attr("class")
+            }).appendTo($list);
+        }
+
+        var $listItems = $list.children('li');
+
+        $customSelection.click(function (e) {
+            e.stopPropagation();
+            $('div.custom-select-selection.active').each(function () {
+                $(this).removeClass('active').next('ul.custom-select-option').hide();
+            });
+            $(this).toggleClass('active').next('ul.custom-select-option').toggle();
+        });
+
+        $listItems.click(function (e) {
+            e.stopPropagation();
+            $customSelection.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('value'));
+            $list.hide();
+
+            var $selection = $this.val();
+            if ($selection.indexOf("http://") == 0 || $selection.indexOf("https://") == 0) {
+                window.location = $selection;
+            }
+            else {
+                console.log($selection);
+            }
+        });
+
+        $(document).click(function () {
+            $customSelection.removeClass('active');
+            $list.hide();
+        });
+    });
+
     var menuMobile = $('.zeynep').zeynep({
         onClosed: function () {
             $("body main").attr("style", "");
