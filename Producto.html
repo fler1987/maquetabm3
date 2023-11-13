@@ -631,8 +631,8 @@
                                     <div class="product-view-images-wrapper">
                                         <div class="row product-view-nav" data-arrow="false">
                                             <div class="row-item product-view-image">
-                                                <div class="media image-zoom" data-zoom-image="assets/images/producto.png" data-fancybox="gallery" data-src="assets/images/producto.png">
-                                                    <img src="assets/images/moto-producto.png" alt="" />
+                                                <div class="media image-zoom" data-zoom-image="assets/images/moto.png" data-fancybox="gallery" data-src="assets/images/moto.png">
+                                                    <img src="assets/images/moto.png" alt="" />
                                                 </div>
                                             </div>
                                             <div class="row-item product-view-image">
@@ -674,9 +674,9 @@
                                     </div>
                                     <div class="product-view-thumbnail-wrapper">
                                         <div class="row product-view-for" data-arrow="false">
-                                            <div class="row-item product-view-thumbnail">
+                                            <div class="row-item product-view-thumbnail" data-product-nav="data-negro">
                                                 <a class="product-view-thumbnail-link" href="javascript:void(0)">
-                                                    <img src="assets/images/producto.png" alt="" />
+                                                    <img src="assets/images/moto.png" alt="" />
                                                 </a>
                                             </div>
                                             <div class="row-item product-view-thumbnail">
@@ -684,7 +684,7 @@
                                                     <img src="assets/images/producto.png" alt="" />
                                                 </a>
                                             </div>
-                                            <div class="row-item product-view-thumbnail">
+                                            <div class="row-item product-view-thumbnail" data-product-nav="data-blanco">
                                                 <a class="product-view-thumbnail-link" href="javascript:void(0)">
                                                     <img src="assets/images/producto.png" alt="" />
                                                 </a>
@@ -754,12 +754,12 @@
                                     <div class="product-view-variants">
                                         <div class="variants-group">
                                             <label class="product-option-select">
-                                                Color: <span data-header-option="">Value Option 2</span>
+                                                Color: <span data-color-option="">Negro</span>
                                             </label>
                                             <div class="product-options">
                                                 <div class="product-option">
                                                     <input class="item-value" type="radio" id="producto-opcion-1" name="product-option-group" value="Value Option 1" checked="">
-                                                    <label class="item-option option-color" for="producto-opcion-1">
+                                                    <label class="item-option option-color" for="producto-opcion-1" onclick="productColorSelection('data-negro', 'Negro');">
                                                         <span class="option-image">
                                                             <img src="assets/images/moto.png" alt="" />
                                                         </span>
@@ -772,12 +772,12 @@
                                                 </div>
                                                 <div class="product-option">
                                                     <input class="item-value" type="radio" id="producto-opcion-2" name="product-option-group" value="Value Option 1">
-                                                    <label class="item-option option-color" for="producto-opcion-2">
+                                                    <label class="item-option option-color" for="producto-opcion-2" onclick="productColorSelection('data-blanco', 'Blanco');">
                                                         <span class="option-image">
                                                             <img src="assets/images/moto.png" alt="" />
                                                         </span>
                                                         <span class="option-color">
-                                                            <span class="option-value">Negro</span>
+                                                            <span class="option-value">Blanco</span>
                                                             <span class="option-price">$1,234</span>
                                                             <span class="option-status"><i class="fa-solid fa-check"></i>Disponible</span>
                                                         </span>
@@ -785,12 +785,12 @@
                                                 </div>
                                                 <div class="product-option">
                                                     <input class="item-value" type="radio" id="producto-opcion-3" name="product-option-group" value="Value Option 1">
-                                                    <label class="item-option option-color" for="producto-opcion-3">
+                                                    <label class="item-option option-color" for="producto-opcion-3" onclick="productColorSelection('data-azul', 'Azul');">
                                                         <span class="option-image">
                                                             <img src="assets/images/moto.png" alt="" />
                                                         </span>
                                                         <span class="option-color">
-                                                            <span class="option-value">Negro</span>
+                                                            <span class="option-value">Azul</span>
                                                             <span class="option-price">$1,234</span>
                                                             <span class="option-status"><i class="fa-solid fa-check"></i>Disponible</span>
                                                         </span>
@@ -1056,7 +1056,9 @@
                                                 <span class="ranking text-uppercase">Top<span>5</span></span>
                                             </div>
                                             <div class="add-custom">
-                                                <a href="#"><img src="assets/images/icon-carrito.svg" /></a>
+                                                <a href="#" class="animate-scale">
+                                                    <img src="assets/images/icon-carrito.svg" />
+                                                </a>
                                             </div>
                                             <div class="product-item-media">
                                                 <a href="#" class="animate-scale">
@@ -1088,7 +1090,9 @@
                                                 <span class="badge badge-offer">Oferta ⚡</span>
                                             </div>
                                             <div class="add-custom">
-                                                <a href="#"><img src="assets/images/icon-carrito.svg" /></a>
+                                                <a href="#" class="animate-scale">
+                                                    <img src="assets/images/icon-carrito.svg" />
+                                                </a>
                                             </div>
                                             <div class="product-item-media">
                                                 <a href="#" class="animate-scale">
@@ -1120,7 +1124,9 @@
                                                 <span class="badge badge-offer">Oferta ⚡</span>
                                             </div>
                                             <div class="add-custom">
-                                                <a href="#"><img src="assets/images/icon-carrito.svg" /></a>
+                                                <a href="#" class="animate-scale">
+                                                    <img src="assets/images/icon-carrito.svg" />
+                                                </a>
                                             </div>
                                             <div class="product-item-media">
                                                 <a href="#" class="animate-scale">
@@ -1660,6 +1666,9 @@
         <div class="background-overlay-zeynep"></div>
 
         <div class="menu-mobile zeynep">
+            <a href="javascript:void(0)" class="zeynep-close" data-close-zeynep="" role="button">
+                <i class="las la-times"></i>
+            </a>
             <ul>
                 <li class="title-menu">
                     <span class="title">Menú</span>
@@ -1819,7 +1828,7 @@
                 <div class="search-popup-wrapper">
                     <div class="search-popup-form">
                         <input type="text" placeholder="Busca por marca, categoría o producto" autocomplete="off" id="searchProduct">
-                        <button type="submit" class="button icon-search">
+                        <button type="submit" class="button button-search icon-search">
                             <i class="las la-search"></i>
                         </button>
                         <button type="submit" class="button icon-cancel" id="searchClear">
