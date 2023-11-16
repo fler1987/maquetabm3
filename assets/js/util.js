@@ -125,7 +125,7 @@
         }
     });
 
-    $(".background-overlay-zeynep").click(function () {
+    $(".background-overlay-zeynep, .zeynep-close").click(function () {
         menuMobile.close();
     });
 
@@ -166,7 +166,7 @@ function searchPopup() {
         $('body').addClass('search-popup-show');
     }
 
-    var searchClose = $('.background-overlay-search, [data-close-search-popup]');
+    var searchClose = $('[data-close-search-popup]');
     searchClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -194,7 +194,7 @@ function accountPopup() {
         $('body').addClass('account-popup-show');
     }
 
-    var accountClose = $('.background-overlay-popup, [data-close-account-popup]');
+    var accountClose = $('[data-close-account-popup]');
     accountClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -213,7 +213,7 @@ function financePopup() {
     $('body').removeClass('search-popup-show');
     $('body').addClass('finance-popup-show');
 
-    var financeClose = $('.background-overlay-popup, [data-close-finance-popup]');
+    var financeClose = $('[data-close-finance-popup]');
     financeClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -224,4 +224,16 @@ function financePopup() {
     });
 
     return false;
+}
+
+function productColorSelection(valor, texto) {
+    var select = $('.product-view-for').find("[data-product-nav='" + valor + "']");
+    var slide = select.parent("div").parent("div");
+    var slideno = slide.attr('data-slick-index');
+
+    if (slideno !== undefined) {
+        $('.product-view-for').slick('slickGoTo', slideno);
+    }
+
+    $('[data-color-option]').html(texto);
 }

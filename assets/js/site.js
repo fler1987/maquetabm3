@@ -49,7 +49,7 @@
         },
         initToggleSidebar: function () {
             var sidebarOpen = $('[data-sidebar]'),
-                sidebarClose = $('.background-overlay, .sidebar-close');
+                sidebarClose = $('.sidebar-close');
 
             sidebarOpen.click(function (e) {
                 e.preventDefault();
@@ -380,7 +380,8 @@
                                         slidesToShow: 4
                                     }
                                 }
-                            ]
+                            ],
+                            adaptiveHeight: true
                         });
                     } else {
                         sliderFor.slick({
@@ -389,7 +390,6 @@
                             arrows: false,
                             dots: false,
                             draggable: false,
-                            adaptiveHeight: false,
                             focusOnSelect: true,
                             vertical: false,
                             verticalSwiping: false,
@@ -408,9 +408,11 @@
                                     slidesToShow: 4,
                                     dots: true
                                 }
-                            }]
+                            }],
+                            adaptiveHeight: true
                         });
                         sliderNav.slick({
+                            adaptiveHeight: true,
                             fade: true,
                             arrows: false,
                             dots: false,
@@ -418,7 +420,8 @@
                             slidesToShow: 1,
                             nextArrow: '<button type="button" class="slick-arrow slick-next" aria-label="Siguiente">' + iconNext + '</button>',
                             prevArrow: '<button type="button" class="slick-arrow slick-prev" aria-label="Anterior">' + iconPrev + '</button>',
-                            asNavFor: sliderFor
+                            asNavFor: sliderFor,
+                            adaptiveHeight: true
                         });
                     }
 
