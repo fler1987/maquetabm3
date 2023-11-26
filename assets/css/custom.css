@@ -64,3 +64,8 @@
 .breadcrumb > span.bread-text {    
     font-size: 11px;
 }
+
+.block-section .product-item-media img {
+    max-height: 250px;
+    max-width: 100%;
+}

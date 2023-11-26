@@ -2396,8 +2396,7 @@ body.open-mobile-sidebar
 
             .header .header-center .menu-item:hover .link-menu
             {
-                color: #CB0101;
-                border-color: #CB0101;
+                color: #CB0101;                
             }
 
             .header .header-center .menu-item .link-menu.active
@@ -3437,6 +3436,7 @@ body.open-mobile-sidebar
     {
         position: relative;
         overflow: hidden;
+		min-height: 250px;
     }
 
     .block-section .product-item-action
