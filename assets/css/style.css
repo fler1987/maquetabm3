@@ -1070,6 +1070,7 @@ html.zeynep-opened
     html.zeynep-opened .zeynep
     {
         pointer-events: auto;
+        display: block;
     }
 
 .zeynep
@@ -1085,15 +1086,13 @@ html.zeynep-opened
     z-index: 1011;
     -webkit-overflow-scrolling: touch;
     pointer-events: none;
-    transform: translateX(-100%);
+    display: none;
 }
 
     html:not(.no-transition) body,
     .zeynep:not(.no-transition),
     .zeynep .submenu:not(.no-transition)
     {
-        transition: all 375ms;
-        transition-property: left, right, transform;
     }
 
 .zeynep-opened .background-overlay-zeynep
@@ -2657,7 +2656,7 @@ body.open-mobile-sidebar
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        padding: 0;
+        padding: 0 40px;
     }
 
     .header .header-center .menu-item.has-megamenu:hover > .submenu-nav
