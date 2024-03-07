@@ -27,7 +27,16 @@
             this.initCollapseProduct();
         },
         ready: function () {
-            //console.log('ready');
+            var url = window.location.pathname;
+            var urlRegExp = new RegExp(url.replace(/\/$/, '') + "$");
+
+            if (url != '/') {
+                $('a').each(function () {
+                    if (urlRegExp.test(this.href.replace(/\/$/, ''))) {
+                        $(this).addClass('active');
+                    }
+                });
+            }
         },
         resize: function () {
             var windowWidth = window.innerWidth;
@@ -40,7 +49,7 @@
         },
         initToggleSidebar: function () {
             var sidebarOpen = $('[data-sidebar]'),
-                sidebarClose = $('.background-overlay, .sidebar-close');
+                sidebarClose = $('.sidebar-close');
 
             sidebarOpen.click(function (e) {
                 e.preventDefault();
@@ -65,7 +74,7 @@
 
             $('.sidebar-block-wrapper .sidebar-block-heading').click(function (e) {
                 var collapseTarget = $(event.currentTarget),
-                    collapseBlock = target.parent().siblings();
+                    collapseBlock = collapseTarget.parent().siblings();
 
                 if (collapseTarget.hasClass('is-clicked')) {
                     collapseTarget.removeClass('is-clicked');
@@ -120,7 +129,7 @@
                             vertical: false,
                             slidesToShow: 1,
                             slidesToScroll: 1,
-                            dots: false,
+                            dots: true,
                             arrows: true,
                             autoplay: true,
                             autoplaySpeed: 3000,
@@ -129,7 +138,7 @@
                             responsive: [{
                                 breakpoint: 1200,
                                 settings: {
-                                    dots: false,
+                                    dots: true,
                                     arrows: true,
                                     slidesToShow: 1,
                                     slidesToScroll: 1,
@@ -158,7 +167,9 @@
                             infinite: true,
                             vertical: false,
                             slidesToShow: 2,
-                            slidesToScroll: 1,
+                            //slidesToScroll: 10,
+                            swipe: true,
+                            swipeToSlide: true,
                             autoplay: true,
                             autoplaySpeed: 3000,
                             dots: false,
@@ -170,8 +181,8 @@
                                 settings: {
                                     dots: false,
                                     arrows: true,
-                                    slidesToShow: itemsLG,
-                                    slidesToScroll: 1
+                                    slidesToShow: itemsLG
+                                    //slidesToScroll: 1
                                 }
                             },
                             {
@@ -179,8 +190,8 @@
                                 settings: {
                                     dots: false,
                                     arrows: true,
-                                    slidesToShow: itemsMD,
-                                    slidesToScroll: 1
+                                    slidesToShow: itemsMD
+                                    //slidesToScroll: 1
                                 }
                             },
                             {
@@ -188,8 +199,8 @@
                                 settings: {
                                     dots: false,
                                     arrows: true,
-                                    slidesToShow: itemsSM,
-                                    slidesToScroll: 1
+                                    slidesToShow: itemsSM
+                                    //slidesToScroll: 1
                                 }
                             },
                             {
@@ -197,8 +208,8 @@
                                 settings: {
                                     dots: false,
                                     arrows: true,
-                                    slidesToShow: itemsXS,
-                                    slidesToScroll: 1
+                                    slidesToShow: itemsXS
+                                    //slidesToScroll: 1
                                 }
                             }]
                         });
@@ -287,8 +298,12 @@
                             adaptiveHeight: false,
                             infinite: true,
                             vertical: false,
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
+                            slidesToShow: 2,
+                            slidesToScroll: 3,
+                            //centerMode: true,
+                            centerPadding: '50px',
+                            touchMove: true,
+                            swipe: true,
                             dots: false,
                             arrows: true,
                             nextArrow: '<button type="button" class="slick-arrow slick-next" aria-label="Siguiente">' + iconNext + '</button>',
@@ -299,7 +314,7 @@
                                     dots: false,
                                     arrows: true,
                                     slidesToShow: itemsLG,
-                                    slidesToScroll: 1
+                                    slidesToScroll: 1                                    
                                 }
                             },
                             {
@@ -308,25 +323,35 @@
                                     dots: false,
                                     arrows: true,
                                     slidesToShow: itemsMD,
-                                    slidesToScroll: 1
+                                    slidesToScroll: 1,
+                                    autoplay: true,
+                                    //centerMode: true
                                 }
                             },
                             {
                                 breakpoint: 512,
                                 settings: {
-                                    dots: false,
+                                    dots: true,
                                     arrows: true,
                                     slidesToShow: itemsSM,
-                                    slidesToScroll: 1
+                                    slidesToScroll: 1,
+                                    autoplay: true,
+                                    mobileFirst: true,
+                                    nextArrow: '<button type="button" class="slick-arrow slick-next" aria-label="Siguiente">' + iconNext + '</button>',
+                                    prevArrow: '<button type="button" class="slick-arrow slick-prev" aria-label="Anterior">' + iconPrev + '</button>',
                                 }
                             },
                             {
                                 breakpoint: 380,
                                 settings: {
-                                    dots: false,
+                                    dots: true,
                                     arrows: true,
                                     slidesToShow: itemsXS,
-                                    slidesToScroll: 1
+                                    slidesToScroll: 1,
+                                    autoplay: true,
+                                    mobileFirst: true,
+                                    nextArrow: '<button type="button" class="slick-arrow slick-next" aria-label="Siguiente">' + iconNext + '</button>',
+                                    prevArrow: '<button type="button" class="slick-arrow slick-prev" aria-label="Anterior">' + iconPrev + '</button>',
                                 }
                             }]
                         });
@@ -371,7 +396,8 @@
                                         slidesToShow: 4
                                     }
                                 }
-                            ]
+                            ],
+                            adaptiveHeight: true
                         });
                     } else {
                         sliderFor.slick({
@@ -380,7 +406,6 @@
                             arrows: false,
                             dots: false,
                             draggable: false,
-                            adaptiveHeight: false,
                             focusOnSelect: true,
                             vertical: false,
                             verticalSwiping: false,
@@ -397,11 +422,13 @@
                                 breakpoint: 768,
                                 settings: {
                                     slidesToShow: 4,
-                                    dots: true
+                                    dots: false
                                 }
-                            }]
+                            }],
+                            adaptiveHeight: true
                         });
                         sliderNav.slick({
+                            adaptiveHeight: true,
                             fade: true,
                             arrows: false,
                             dots: false,
@@ -409,7 +436,8 @@
                             slidesToShow: 1,
                             nextArrow: '<button type="button" class="slick-arrow slick-next" aria-label="Siguiente">' + iconNext + '</button>',
                             prevArrow: '<button type="button" class="slick-arrow slick-prev" aria-label="Anterior">' + iconPrev + '</button>',
-                            asNavFor: sliderFor
+                            asNavFor: sliderFor,
+                            adaptiveHeight: true
                         });
                     }
 

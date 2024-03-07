@@ -14,12 +14,13 @@
 
     <link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="assets/lib/bootstrap/bootstrap-grid.css">
-    <link rel="stylesheet" href="assets/lib/slick-carouse/slick.min.css">
+    <link rel="stylesheet" href="assets/lib/slick-carouse/slick.css">
+    <link rel="stylesheet" href="assets/lib/slick-carouse/slick-theme.css">
     <link rel="stylesheet" href="assets/lib/fancybox/fancybox.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome.css">
     <link rel="stylesheet" href="assets/fonts/lineawesome.css">
     <link rel="stylesheet" href="assets/css/animation.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?x=1">
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
@@ -40,7 +41,7 @@
                                     <nav class="menu-nav">
                                         <ul class="menu-list">
                                             <li class="menu-item menu-lv-1 has-megamenu dropdown">
-                                                <a href="#" class="link-menu active">
+                                                <a href="Default.html" class="link-menu">
                                                     <span class="text">Motos</span>
                                                 </a>
                                                 <div class="submenu-nav megamenu-nav">
@@ -52,7 +53,7 @@
                                                                         <div class="row-item submenu-col dropdown col-12 col-lg-4">
                                                                             <div class="submenu-section">
                                                                                 <a href="#" class="link-title">
-                                                                                    <span class="text">MODELOS</span>
+                                                                                    <span class="text">MODELOS 3</span>
                                                                                 </a>
                                                                                 <div class="submenu-group">
                                                                                     <ul class="submenu-list list-unstyled">
@@ -1305,7 +1306,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/producto.png" alt="" />
+                                                            <img src="assets/images/moto.png" alt="" />
                                                         </a>
                                                         <div class="product-item-action">
                                                             <a class="button" href="#">Agregar</a>
@@ -1338,7 +1339,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/producto.png" alt="" />
+                                                            <img src="assets/images/moto.png" alt="" />
                                                         </a>
                                                         <div class="product-item-action">
                                                             <a class="button" href="#">Agregar</a>
@@ -1371,7 +1372,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/producto.png" alt="" />
+                                                            <img src="assets/images/moto.png" alt="" />
                                                         </a>
                                                         <div class="product-item-action">
                                                             <a class="button" href="#">Agregar</a>
@@ -1403,7 +1404,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/producto.png" alt="" />
+                                                            <img src="assets/images/moto.png" alt="" />
                                                         </a>
                                                         <div class="product-item-action">
                                                             <a class="button" href="#">Agregar</a>
@@ -1435,7 +1436,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/producto.png" alt="" />
+                                                            <img src="assets/images/moto.png" alt="" />
                                                         </a>
                                                         <div class="product-item-action">
                                                             <a class="button" href="#">Agregar</a>
@@ -1865,6 +1866,9 @@
         <div class="background-overlay-zeynep"></div>
 
         <div class="menu-mobile zeynep">
+            <a href="javascript:void(0)" class="zeynep-close" data-close-zeynep="" role="button">
+                <i class="las la-times"></i>
+            </a>
             <ul>
                 <li class="title-menu">
                     <span class="title">Menú</span>
@@ -2023,13 +2027,14 @@
             <div class="container container-1170">
                 <div class="search-popup-wrapper">
                     <div class="search-popup-form">
-                        <input type="text" placeholder="Busca por marca, categoría o producto" autocomplete="off" id="searchProduct">
-                        <button type="submit" class="button icon-search">
-                            <i class="las la-search"></i>
-                        </button>
-                        <button type="submit" class="button icon-cancel" id="searchClear">
-                            <i class="las la-times"></i>
-                        </button>
+					
+					<input type="text" name="q" placeholder="Busca por marca, categoría o producto" autocomplete="off" id="searchProduct">
+                    <button type="submit" class="button icon-search" id="searchButton">
+                        <i class="las la-search"></i>
+                    </button>
+                    <button type="button" class="button icon-cancel" id="searchClear" style="display: none">
+                        <i class="las la-times"></i>
+                    </button>									                      
                     </div>
                     <div class="search-popup-result d-none">
                         <div class="search-result-list"></div>
@@ -2301,7 +2306,7 @@
     <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/lib/bootstrap/popper.min.js"></script>
     <script src="assets/lib/jquery.zeynep/jquery.zeynep.min.js"></script>
-    <script src="assets/lib/slick-carouse/slick.min.js"></script>
+    <script src="assets/lib/slick-carouse/slick.js"></script>
     <script src="assets/lib/fancybox/fancybox.umd.js"></script>
     <script src="assets/js/site.js"></script>
     <script src="assets/js/util.js"></script>

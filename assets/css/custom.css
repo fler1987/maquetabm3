@@ -36,16 +36,12 @@
     margin: 5px 0 !important;
 }
 
-.block-banner-full .content-box-info {    
-    margin-top: 150px !important;
-}
-
 
 .block-section .block-header {   
     margin-bottom: 30px !important;
 }
 
-.slick-arrow { 
+.block-standout .slick-arrow { 
     top: 30% !important; 
 }
 
@@ -67,4 +63,20 @@
 
 .breadcrumb > span.bread-text {    
     font-size: 11px;
+}
+
+.block-section .product-item-media img {
+    max-height: 250px;
+    max-width: 100%;
+}
+
+p.product-item-name.altura {
+    /*height: 50px;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.footer .footer-menu .footer-icon-text .item-text a {
+    color: #dddddd;
 }

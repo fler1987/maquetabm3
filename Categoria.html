@@ -14,7 +14,8 @@
 
     <link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="assets/lib/bootstrap/bootstrap-grid.css">
-    <link rel="stylesheet" href="assets/lib/slick-carouse/slick.min.css">
+    <link rel="stylesheet" href="assets/lib/slick-carouse/slick.css">
+    <link rel="stylesheet" href="assets/lib/slick-carouse/slick-theme.css">
     <link rel="stylesheet" href="assets/lib/fancybox/fancybox.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome.css">
     <link rel="stylesheet" href="assets/fonts/lineawesome.css">
@@ -40,7 +41,7 @@
                                     <nav class="menu-nav">
                                         <ul class="menu-list">
                                             <li class="menu-item menu-lv-1 has-megamenu dropdown">
-                                                <a href="#" class="link-menu active">
+                                                <a href="#" class="link-menu">
                                                     <span class="text">Motos</span>
                                                 </a>
                                                 <div class="submenu-nav megamenu-nav">
@@ -202,7 +203,7 @@
                                                 </div>
                                             </li>
                                             <li class="menu-item menu-lv-1 has-megamenu dropdown">
-                                                <a href="#" class="link-menu">
+                                                <a href="Categoria.html" class="link-menu">
                                                     <span class="text">Ropa y Accesorios</span>
                                                 </a>
                                                 <div class="submenu-nav megamenu-nav">
@@ -598,7 +599,7 @@
             </section>
             <section class="block-section block-nav">
                 <div class="container container-1170">
-                    <div class="block-header">
+                    <div class="block-header" style="border: none; margin-top:30px;">
                         <div class="header-left">
                             <div class="header-title">
                                 <h3 class="text-uppercase">Nuestros Modelos</h3>
@@ -607,7 +608,7 @@
                         <div class="header-right">
                             <div class="toolbar">
                                 <div class="toolbar-item">
-                                    <select>
+                                    <select class="select-bm3">
                                         <option>Marcas</option>
                                         <option>Marca 1</option>
                                         <option>Marca 2</option>
@@ -615,7 +616,7 @@
                                     </select>
                                 </div>
                                 <div class="toolbar-item">
-                                    <select>
+                                    <select class="select-bm3">
                                         <option>Comparar por Precio</option>
                                         <option>Orden 1</option>
                                         <option>Orden 2</option>
@@ -1428,6 +1429,9 @@
         <div class="background-overlay-zeynep"></div>
 
         <div class="menu-mobile zeynep">
+            <a href="javascript:void(0)" class="zeynep-close" data-close-zeynep="" role="button">
+                <i class="las la-times"></i>
+            </a>
             <ul>
                 <li class="title-menu">
                     <span class="title">Menú</span>
@@ -1587,7 +1591,7 @@
                 <div class="search-popup-wrapper">
                     <div class="search-popup-form">
                         <input type="text" placeholder="Busca por marca, categoría o producto" autocomplete="off" id="searchProduct">
-                        <button type="submit" class="button icon-search">
+                        <button type="submit" class="button button-search icon-search">
                             <i class="las la-search"></i>
                         </button>
                         <button type="submit" class="button icon-cancel" id="searchClear">
@@ -1813,7 +1817,7 @@
     <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/lib/bootstrap/popper.min.js"></script>
     <script src="assets/lib/jquery.zeynep/jquery.zeynep.min.js"></script>
-    <script src="assets/lib/slick-carouse/slick.min.js"></script>
+    <script src="assets/lib/slick-carouse/slick.js"></script>
     <script src="assets/lib/fancybox/fancybox.umd.js"></script>
     <script src="assets/js/site.js"></script>
     <script src="assets/js/util.js"></script>
