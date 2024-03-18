@@ -590,46 +590,85 @@
         </header>
 
         <section class="main">
-            <section class="block-section block-nav">
+            <section class="block-section block-section-bg bg-category" style="background-image: url(assets/images/categoria.jpg);">
                 <div class="container container-1170">
-                    <div class="block-header">
-                        <div class="header-left">
-                            <div class="header-title">
-                                <nav class="breadcrumb">
-                                    <a class="bread-text" href="#">
-                                        <span class="text">Inicio</span>
-                                    </a>
-                                    <span class="separate">
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </span>
-                                    <a class="bread-text" href="#">
-                                        <span class="text">Categoría</span>
-                                    </a>
-                                    <span class="separate">
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </span>
-                                    <span class="bread-text">Motos</span>
-                                    <span class="separate">
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </span>
-                                    <span class="bread-text">Motos</span>
-                                </nav>
+                    <div class="block-content">
+                        <h1>Llantas</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="block-section block-llanta">
+                <div class="container container-1170">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="llanta-buscar-medida-tab" data-bs-toggle="pill" data-bs-target="#llanta-buscar-medida" type="button" role="tab" aria-controls="llanta-buscar-medida" aria-selected="true">Buscar por medida</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="llanta-buscar-vehiculo-tab" data-bs-toggle="pill" data-bs-target="#llanta-buscar-vehiculo" type="button" role="tab" aria-controls="llanta-buscar-vehiculo" aria-selected="false">Buscar por vehículo</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="llanta-buscar-medida" role="tabpanel" aria-labelledby="llanta-buscar-medida-tab" tabindex="0">
+                            <div class="row">
+                                <div class="row-item col-12 col-md-3">
+                                    Ancho
+                                </div>
+                                <div class="row-item col-12 col-md-3">
+                                    Perfil
+                                </div>
+                                <div class="row-item col-12 col-md-3">
+                                    Alto
+                                </div>
+                                <div class="row-item col-12 col-md-3">
+                                    Buscar
+                                </div>
                             </div>
                         </div>
-                        <div class="header-right"></div>
-                    </div>
+                        <div class="tab-pane fade" id="llanta-buscar-vehiculo" role="tabpanel" aria-labelledby="llanta-buscar-vehiculo-tab" tabindex="0">
+                            <div class="row">
+                                <div class="row-item col-12 col-md-3">
+                                    Ancho
+                                </div>
+                                <div class="row-item col-12 col-md-3">
+                                    Perfil
+                                </div>
+                                <div class="row-item col-12 col-md-3">
+                                    Alto
+                                </div>
+                                <div class="row-item col-12 col-md-3">
+                                    Buscar
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                 </div>
             </section>
             <section class="block-section block-popular popular-collection">
                 <div class="container container-1170">
                     <div class="block-content">
-                        <div class="block-slide" data-category-slide="" data-items-xs="4" data-items-sm="4" data-items-md="4" data-items-lg="4">
+                        <div class="block-slide" data-category-slide="" data-items-xs="4" data-items-sm="4" data-items-md="5" data-items-lg="5">
                             <div class="row slide-items">
                                 <div class="row-item">
                                     <div class="wrapper-item">
                                         <div class="image-box">
                                             <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/producto.png" alt="" />
+                                                <img src="assets/images/llanta.png" alt="" />
+                                            </a>
+                                        </div>
+                                        <div class="content content-box-column col-center">
+                                            <p class="content-title">
+                                                <a href="#">
+                                                    <span class="text text-uppercase">Doble propósito</span>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-item">
+                                    <div class="wrapper-item">
+                                        <div class="image-box">
+                                            <a href="#" class="image image-round animate-scale">
+                                                <img src="assets/images/llanta.png" alt="" />
                                             </a>
                                         </div>
                                         <div class="content content-box-column col-center">
@@ -645,7 +684,7 @@
                                     <div class="wrapper-item">
                                         <div class="image-box">
                                             <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/producto.png" alt="" />
+                                                <img src="assets/images/llanta.png" alt="" />
                                             </a>
                                         </div>
                                         <div class="content content-box-column col-center">
@@ -661,13 +700,13 @@
                                     <div class="wrapper-item">
                                         <div class="image-box">
                                             <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/producto.png" alt="" />
+                                                <img src="assets/images/llanta.png" alt="" />
                                             </a>
                                         </div>
                                         <div class="content content-box-column col-center">
                                             <p class="content-title">
                                                 <a href="#">
-                                                    <span class="text text-uppercase">Todo Terreno</span>
+                                                    <span class="text text-uppercase">Cuatrimoto</span>
                                                 </a>
                                             </p>
                                         </div>
@@ -677,77 +716,13 @@
                                     <div class="wrapper-item">
                                         <div class="image-box">
                                             <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/producto.png" alt="" />
+                                                <img src="assets/images/llanta.png" alt="" />
                                             </a>
                                         </div>
                                         <div class="content content-box-column col-center">
                                             <p class="content-title">
                                                 <a href="#">
-                                                    <span class="text text-uppercase">Pisteras</span>
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-item">
-                                    <div class="wrapper-item">
-                                        <div class="image-box">
-                                            <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/producto.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="content content-box-column col-center">
-                                            <p class="content-title">
-                                                <a href="#">
-                                                    <span class="text text-uppercase">Chopper</span>
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-item">
-                                    <div class="wrapper-item">
-                                        <div class="image-box">
-                                            <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/producto.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="content content-box-column col-center">
-                                            <p class="content-title">
-                                                <a href="#">
-                                                    <span class="text text-uppercase">Deportivas</span>
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-item">
-                                    <div class="wrapper-item">
-                                        <div class="image-box">
-                                            <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/producto.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="content content-box-column col-center">
-                                            <p class="content-title">
-                                                <a href="#">
-                                                    <span class="text text-uppercase">Ejecutivas</span>
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-item">
-                                    <div class="wrapper-item">
-                                        <div class="image-box">
-                                            <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/producto.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="content content-box-column col-center">
-                                            <p class="content-title">
-                                                <a href="#">
-                                                    <span class="text text-uppercase">Utilitarias</span>
+                                                    <span class="text text-uppercase">Cross</span>
                                                 </a>
                                             </p>
                                         </div>
@@ -1098,13 +1073,9 @@
                                     <div class="row-item col-12 col-xs-6 col-sm-4 col-md-4 col-lg-4">
                                         <div class="product-item">
                                             <div class="product-item-top">
-                                                <div class="badge-custom">
-                                                    <span class="badge badge-new">Nuevo ⭐</span>
-                                                    <span class="badge badge-offer">Oferta ⚡</span>
-                                                </div>
                                                 <div class="product-item-media">
                                                     <a href="#" class="animate-scale">
-                                                        <img src="assets/images/producto.png" alt="" />
+                                                        <img src="assets/images/llanta.png" alt="" />
                                                     </a>
                                                     <div class="product-item-action">
                                                         <a class="button" href="#">Agregar</a>
@@ -1128,6 +1099,10 @@
                                                             <span class="price-offer">S/1,000</span>
                                                             <span class="price-old">S/1,234</span>
                                                         </p>
+                                                        <p class="product-item-additional">
+                                                            <span class="text">Black</span>
+                                                            <span class="discount">-15%</span>
+                                                        </p>
                                                     </a>
                                                 </div>
                                             </div>
@@ -1137,11 +1112,10 @@
                                         <div class="product-item">
                                             <div class="product-item-top">
                                                 <div class="badge-custom">
-                                                    <span class="badge badge-offer">Oferta ⚡</span>
                                                 </div>
                                                 <div class="product-item-media">
                                                     <a href="#" class="animate-scale">
-                                                        <img src="assets/images/producto.png" alt="" />
+                                                        <img src="assets/images/llanta.png" alt="" />
                                                     </a>
                                                     <div class="product-item-action">
                                                         <a class="button" href="#">Agregar</a>
@@ -1163,6 +1137,8 @@
                                                         </p>
                                                         <p class="product-item-price">
                                                             <span class="price-normal">S/1,000</span>
+                                                            <span class="price-normal">-</span>
+                                                            <span class="price-normal">S/1,000</span>
                                                         </p>
                                                     </a>
                                                 </div>
@@ -1173,12 +1149,10 @@
                                         <div class="product-item">
                                             <div class="product-item-top">
                                                 <div class="badge-custom">
-                                                    <span class="badge badge-new">Nuevo ⭐</span>
-                                                    <span class="badge badge-offer">Oferta ⚡</span>
                                                 </div>
                                                 <div class="product-item-media">
                                                     <a href="#" class="animate-scale">
-                                                        <img src="assets/images/producto.png" alt="" />
+                                                        <img src="assets/images/llanta.png" alt="" />
                                                     </a>
                                                     <div class="product-item-action">
                                                         <a class="button" href="#">Agregar</a>
@@ -1201,6 +1175,7 @@
                                                         <p class="product-item-price">
                                                             <span class="price-offer">S/1,000</span>
                                                             <span class="price-old">S/1,234</span>
+                                                            <span class="discount">-15%</span>
                                                         </p>
                                                     </a>
                                                 </div>
@@ -1211,11 +1186,10 @@
                                         <div class="product-item">
                                             <div class="product-item-top">
                                                 <div class="badge-custom">
-                                                    <span class="badge badge-sold-out">Agotado ❌</span>
                                                 </div>
                                                 <div class="product-item-media">
                                                     <a href="#" class="animate-scale">
-                                                        <img src="assets/images/producto.png" alt="" />
+                                                        <img src="assets/images/llanta.png" alt="" />
                                                     </a>
                                                     <div class="product-item-action">
                                                         <a class="button" href="#">Agregar</a>
@@ -1247,11 +1221,10 @@
                                         <div class="product-item">
                                             <div class="product-item-top">
                                                 <div class="badge-custom">
-                                                    <span class="badge badge-new">Nuevo ⭐</span>
                                                 </div>
                                                 <div class="product-item-media">
                                                     <a href="#" class="animate-scale">
-                                                        <img src="assets/images/producto.png" alt="" />
+                                                        <img src="assets/images/llanta.png" alt="" />
                                                     </a>
                                                     <div class="product-item-action">
                                                         <a class="button" href="#">Agregar</a>
@@ -1283,11 +1256,10 @@
                                         <div class="product-item">
                                             <div class="product-item-top">
                                                 <div class="badge-custom">
-                                                    <span class="badge badge-offer">Oferta ⚡</span>
                                                 </div>
                                                 <div class="product-item-media">
                                                     <a href="#" class="animate-scale">
-                                                        <img src="assets/images/producto.png" alt="" />
+                                                        <img src="assets/images/llanta.png" alt="" />
                                                     </a>
                                                     <div class="product-item-action">
                                                         <a class="button" href="#">Agregar</a>
@@ -1712,7 +1684,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/producto.png" alt="" />
+                                                            <img src="assets/images/llanta.png" alt="" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1739,7 +1711,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/producto.png" alt="" />
+                                                            <img src="assets/images/llanta.png" alt="" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1766,7 +1738,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/producto.png" alt="" />
+                                                            <img src="assets/images/llanta.png" alt="" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1792,7 +1764,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/producto.png" alt="" />
+                                                            <img src="assets/images/llanta.png" alt="" />
                                                         </a>
                                                     </div>
                                                 </div>
