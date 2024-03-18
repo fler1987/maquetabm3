@@ -601,26 +601,48 @@
                 <div class="container container-1170">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link active" id="llanta-buscar-medida-tab" data-bs-toggle="pill" data-bs-target="#llanta-buscar-medida" type="button" role="tab" aria-controls="llanta-buscar-medida" aria-selected="true">Buscar por medida</button>
+                          <button class="nav-link active" id="llanta-buscar-medida-tab" data-bs-toggle="pill" data-bs-target="#llanta-buscar-medida" type="button" role="tab" aria-controls="llanta-buscar-medida" aria-selected="true"><i class="fa-solid fa-motorcycle"></i> Buscar por medida</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="llanta-buscar-vehiculo-tab" data-bs-toggle="pill" data-bs-target="#llanta-buscar-vehiculo" type="button" role="tab" aria-controls="llanta-buscar-vehiculo" aria-selected="false">Buscar por vehículo</button>
+                          <button class="nav-link" id="llanta-buscar-vehiculo-tab" data-bs-toggle="pill" data-bs-target="#llanta-buscar-vehiculo" type="button" role="tab" aria-controls="llanta-buscar-vehiculo" aria-selected="false"><i class="fa-solid fa-circle-question"></i> Buscar por vehículo</button>
                         </li>
                       </ul>
                       <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="llanta-buscar-medida" role="tabpanel" aria-labelledby="llanta-buscar-medida-tab" tabindex="0">
-                            <div class="row">
-                                <div class="row-item col-12 col-md-3">
-                                    Ancho
-                                </div>
-                                <div class="row-item col-12 col-md-3">
-                                    Perfil
-                                </div>
-                                <div class="row-item col-12 col-md-3">
-                                    Alto
-                                </div>
-                                <div class="row-item col-12 col-md-3">
-                                    Buscar
+                            <div class="block-form">
+                                <div class="row">
+                                    <div class="row-item col-input col-md-3">
+                                        <div class="form-field">
+                                            <label class="form-label" for="data-ancho">Ancho</label>
+                                            <select class="form-input" id="data-ancho" name="data-ancho">
+                                                <option>XXX / --- / ---</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row-item col-input col-md-3">
+                                        <div class="form-field">
+                                            <label class="form-label" for="data-perfil">Perfil</label>
+                                            <select class="form-input" id="data-perfil" name="data-perfil">
+                                                <option>--- / XXX / ---</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row-item col-input col-md-3">
+                                        <div class="form-field">
+                                            <label class="form-label" for="data-aro">Tamaño del aro</label>
+                                            <select class="form-input" id="data-aro" name="data-aro">
+                                                <option>--- / --- / XXX</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row-item col-button col-md-3">
+                                        <div class="form-action">
+                                            <a href="javascript:void(0);" class="button button-alt" onclick="action();">
+                                                <span class="text icon">Buscar</span>
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

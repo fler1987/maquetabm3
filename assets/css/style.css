@@ -6540,5 +6540,68 @@ body.finance-popup-show .finance-popup {
 .block-llanta {
     position: relative;
     padding: 50px 0 35px 0;
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.block-llanta .block-form .form-field {
+    position: relative;
+    display: block;
+    margin: 15px 0px;
+}
+
+.block-llanta .block-form .form-field .form-label {
+    position: absolute;
+    top: -10px;
+    left: 9px;
+    color: #444444;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 5px;
+    background: #ffffff;
+}
+
+.block-llanta .block-form .form-field .form-input {
+    display: block;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #c7c7c7;
+    color: #232323;
+    background-color: #fff;
+    width: 100%;
+    font-weight: 600;
+}
+
+.block-llanta .block-form .form-field .form-input:hover {
+    border-color: #8f8f8f;
+}
+
+.block-llanta .block-form .form-action {
+    display: block;
+    margin-top: 15px;
+}
+
+.block-llanta .block-form .form-action .button {
+    width: 100%;
+    padding: 5px 15px 4px 15px;
+    line-height: 40px;
+}
+
+.block-llanta .block-form .form-action .text {
+    display: inline-block;
+}
+
+.block-llanta .block-form .form-action .icon {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.block-llanta .block-form .col-input {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.block-llanta .block-form .col-button {
+    flex: 0 0 auto;
+    width: 20%;
 }
