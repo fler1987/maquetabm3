@@ -25,6 +25,7 @@
             this.initToggleSidebar();
             this.initCollapseSidebar();
             this.initCollapseProduct();
+            this.initSliderProductoOwl();
         },
         ready: function () {
             var url = window.location.pathname;
@@ -300,8 +301,6 @@
                             vertical: false,
                             slidesToShow: 2,
                             slidesToScroll: 3,
-                            //centerMode: true,
-                            centerPadding: '50px',
                             touchMove: true,
                             swipe: true,
                             dots: false,
@@ -443,6 +442,34 @@
 
                 }
             }
+        },
+        initSliderProductoOwl: function () {
+            $('.block-slider-product-owl').owlCarousel({
+                loop:true,
+                margin:20,
+                autoplay:true,
+                autoplayHoverPause: true,
+                nav:true,
+                navText: ["<i class='fa-solid fa-chevron-left'></i>","<i class='fa-solid fa-chevron-right'></i>"],
+                dots:false,
+                responsive:{
+                    0:{
+                        items:1.5
+                    },
+                    380:{
+                        items:2.5
+                    },
+                    768:{
+                        items:2.5
+                    },
+                    1024:{
+                        items:3.5
+                    },
+                    1400:{
+                        items:3.5
+                    }
+                }
+            });
         },
     };
 })(jQuery);
