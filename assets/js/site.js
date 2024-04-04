@@ -16,7 +16,6 @@
 
     var bm3 = {
         init: function () {
-            //console.log('init');
             this.initSliderBanner();
             this.initSliderBrand();
             this.initSlideCategory();

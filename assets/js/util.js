@@ -22,8 +22,14 @@
         $('#searchClear').hide();
     });
 
-
-
+    $('#searchClearLlanta').click(function () {
+        $('#searchProductLlanta').val('');
+        $('#searchProductLlanta').focus();
+        $('.search-llanta-result').removeClass('d-none').addClass('d-none');
+        $('.search-llanta-popular').removeClass('d-none');
+        $('#searchClearLlanta').hide();
+    });
+	
     $('.select-bm3').each(function () {
         var $this = $(this),
             numberOfOptions = $(this).children('option').length;
@@ -40,8 +46,6 @@
         }).insertAfter($customSelection);
 
         for (var i = 0; i < numberOfOptions; i++) {
-            console.log($this.children('option').eq(i).attr("class"));
-
             $('<li />', {
                 text: $this.children('option').eq(i).text(),
                 value: $this.children('option').eq(i).val(),
@@ -70,7 +74,6 @@
                 window.location = $selection;
             }
             else {
-                console.log($selection);
                 actionSelect($this.attr('id'), $selection);
             }
         });
@@ -264,8 +267,6 @@ function productColorSelection(valor, texto, precio, descuento, tipoMoneda, tipo
         currency: 'PEN',
     });
 
-    console.log(`The formated version of ${precio} is ${USDollar.format(precio)}`);
-
     if (slideno !== undefined) {
         $('.product-view-for').slick('slickGoTo', slideno);
     }
@@ -347,8 +348,6 @@ $('#searchProduct').keyup(function () {
 
         $.getJSON(url, function (data) {
             if (data.length > 0) {
-
-                console.log(data);
                 $('#searchResults').empty(); // Limpia los resultados anteriores
                 var output = '';
                 for (var i = 0; i < data.length; i++) {
@@ -363,7 +362,7 @@ $('#searchProduct').keyup(function () {
                             var pictureURL = pictureURLs[j];
 
                             /*output += '<a href="javascript:void(0);">';*/
-                            output += '<a href="/busqueda?q=' + name + '" class="result-item" data-name="' + name + '">';
+                            output += '<a href="/busqueda?q=' + name + '" class="search-result-item" data-name="' + name + '">';
                             output += '    <div class="d-flex align-items-center">';
                             output += '        <img src="content/images/' + pictureURL + '" />';
                             output += '        <div class="flex-1 ms-3">';
@@ -393,11 +392,38 @@ $('#searchProduct').keyup(function () {
     }
 });
 
-$('.result-item').click(function (e) {
-
+$('.search-result-item').click(function (e) {
     e.preventDefault();
     var selectedName = $(this).data('name');
     $("#searchProduct").val(selectedName);
     var url = '/Catalogo/Busqueda?q=' + selectedName;
+    window.location.href = url;
+});
+
+$('#searchProductLlanta').keyup(function () {
+    var textCount = $(this).val().length;
+    if (textCount == 0) {
+        $('#searchClearLlanta').hide();
+    } else {
+        $('#searchClearLlanta').show();
+    }
+    
+	//$('.search-llanta-result').removeClass('d-none').addClass('d-none');
+    //$('.search-llanta-popular').removeClass('d-none');
+	
+	$('.search-llanta-result').removeClass('d-none');
+	$('.search-llanta-popular').addClass('d-none');
+	
+	console.log('searchProductLlanta');
+	
+	//$('.search-popup-result').removeClass('d-none');
+	//$('.search-popup-popular').addClass('d-none');
+});
+
+$('.search-result-llanta').click(function (e) {
+    e.preventDefault();
+    var selectedName = $(this).data('name');
+    $("#searchProductLlanta").val(selectedName);
+    var url = '/Catalogo/Llanta?q=' + selectedName;
     window.location.href = url;
 });

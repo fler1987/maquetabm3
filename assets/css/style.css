@@ -6595,6 +6595,52 @@ body.finance-popup-show .finance-popup {
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
+.block-llanta .nav-pills .nav-link {
+    color: #000000;
+    background-color: #ffffff;
+    border-bottom: 5px solid #ffffff;
+    border-radius: 0;
+    padding: 5px 5px 10px 5px;
+    margin-right: 10px;
+}
+
+.block-llanta .nav-pills .nav-link i {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.block-llanta .nav-pills .nav-link.active {
+    color: #000000;
+    background-color: #ffffff;
+    border-bottom: 5px solid #ED1D24;
+    border-radius: 0;
+}
+
+.block-llanta .info-llanta {
+    display: block;
+    padding: 10px 10px;
+    background: #F5F5F5;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.block-llanta .info-llanta span {
+    position: relative;
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.block-llanta .info-llanta span i {
+    position: relative;
+    top: 1px;
+    margin-right: 2px;
+    font-size: 14px;
+}
+
 .block-llanta .block-form .form-field {
     position: relative;
     display: block;
@@ -6657,3 +6703,147 @@ body.finance-popup-show .finance-popup {
     flex: 0 0 auto;
     width: 20%;
 }
+
+.search-llanta {
+}
+
+.search-llanta .search-llanta-wrapper {
+    position: relative;
+    padding: 30px;
+}
+
+.search-llanta .search-llanta-form {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.search-llanta .search-llanta-form input {
+	width: 100%;
+    line-height: 45px;
+    padding: 0 100px 0 15px;
+    border: 1px solid #979797;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.search-llanta .search-llanta-form input:focus,
+.search-llanta .search-llanta-form input:hover {
+    border-color: #000000;
+}
+
+.search-llanta .search-llanta-form button {
+    font-size: 25px;
+    line-height: 33px;
+    color: #222831;
+    background: none;
+    border: none;
+    padding: 7px 14px;
+}
+
+.search-llanta .search-llanta-form button.button-search {
+    color: #ffffff;
+    background: #000000;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.search-llanta .search-llanta-form button.icon-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.search-llanta .search-llanta-form button.icon-cancel {
+    position: absolute;
+    top: 0;
+    right: 52px;
+}
+
+.search-llanta .search-llanta-result {
+    position: relative;
+    display: block;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, .1);
+}
+
+.search-llanta .search-llanta-result .search-result-list {
+    position: relative;
+    display: block;
+    padding: 15px;
+}
+
+.search-llanta .search-llanta-result .search-result-list a {
+    display: block;
+    padding: 3px;
+}
+
+.search-llanta .search-llanta-result .search-result-list img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.search-llanta .search-llanta-result .search-result-button {
+    position: relative;
+    display: block;
+    border-top: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.search-llanta .search-llanta-popular {
+    position: relative;
+    margin-top: 35px;
+}
+
+.search-llanta .search-llanta-popular h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.search-llanta .search-llanta-popular .popular-search {
+    position: relative;
+}
+
+.search-llanta .search-llanta-popular .popular-search a {
+    display: block;
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.search-llanta .search-llanta-popular .popular-product {
+    position: relative;
+    padding: 10px 0 0 0;
+}
+
+@media (max-width: 1024px) {
+    .search-llanta {
+        top: 50px;
+    }
+
+    .search-llanta .search-llanta-wrapper {
+        position: relative;
+        padding: 15px 0;
+    }
+
+    .search-llanta .search-llanta-popular {
+        margin-top: 25px;
+    }
+
+    .search-llanta .search-llanta-popular h3 {
+        margin-bottom: 15px;
+    }
+}
+
+
+

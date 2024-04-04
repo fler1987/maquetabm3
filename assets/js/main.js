@@ -31,13 +31,9 @@ function Search() {
 
             var varianteURl = formaURlVariante(variantName.split(","), variantDetailNames.split(","));
 
-            console.log(varianteURl);
-
             if (url.includes("?")) {
                 let urlsplit = url.split('?');
                 url = urlsplit[0];
-                console.log("url");
-                console.log(url);
             }
             if (catalog != "") {
                 url = url + (!url.includes("?") ? "?" : "&") + "catalog=" + catalog;
@@ -73,7 +69,6 @@ function Search() {
 
                 url = url + (!url.includes("?") ? "?" : "&") + "filter=" + encodeURIComponent(varianteURl);
             }
-            console.log(url);
             window.location.href = url;
         }, 100);
     }
@@ -112,9 +107,6 @@ function Buscar() {
         searchTimeout = setTimeout(function () {
             var url = searchURL;
 
-            console.log("searchURL");
-            console.log(searchURL);
-
             var priceMin = $("[name=fromMoto]").val();
             var priceMax = $("[name=toMoto]").val();
 
@@ -148,8 +140,6 @@ function Buscar() {
 
                 url = url + (!url.includes("?") ? "?" : "&") + "filter=" + encodeURIComponent(varianteURl);
             }
-
-            console.log("url search: " + url);
 
             window.location.href = url;
         }, 100);

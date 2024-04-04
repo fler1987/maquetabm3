@@ -450,7 +450,6 @@ initSliderAnnouncementBar: function() {
 
     if (announcement_bar.length > 0) {
         if (!announcement_item.hasClass('slick-initialized')) {
-            console.log("announcement_item", announcement_item)
             announcement_item.slick({
                 infinite: true,
                 vertical: true,
@@ -810,13 +809,10 @@ initNewsLetterPopup: function() {
 },
 
 initLogInPopup: function() {
-
-    console.log('initLogInPopup');
     var btnOpen = $('[data-open-auth-login]'),
         btnClose = $(".background-overlay-popup, [data-close-account-login-popup]");
 
     if (btnOpen.length) {
-        console.log('btnOpen');
         btnOpen.on('click', (event) => {
             event.preventDefault();
             event.stopPropagation();
@@ -873,9 +869,7 @@ initForgotPopup: function () {
         var btnOpen = $('[data-open-auth-forgot]'),
             btnClose = $(".background-overlay-popup, [data-close-account-forgot-popup]");
 
-
         if (btnOpen.length) {
-            console.log('btnOpenForgot');
             btnOpen.on('click', (event) => {
                 event.preventDefault();
                 event.stopPropagation();
