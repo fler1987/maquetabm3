@@ -427,3 +427,31 @@ $('.search-result-llanta').click(function (e) {
     var url = '/Catalogo/Llanta?q=' + selectedName;
     window.location.href = url;
 });
+
+function llantaPopup() {
+    //remover otros popup
+    $('body').removeClass('search-popup-show');
+    $('.menu-icon.menu-icon-search').removeClass('active');
+
+    if ($('.menu-icon.menu-icon-llanta').hasClass('active')) {
+        $('.menu-icon.menu-icon-llanta').removeClass('active');
+        $('body').removeClass('llanta-popup-show');
+    }
+    else {
+        $('.menu-icon.menu-icon-llanta').addClass('active');
+        $('body').addClass('llanta-popup-show');
+    }
+
+    var llantaClose = $('[data-close-llanta-popup]');
+    llantaClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('llanta-popup-show')) {
+            $('body').removeClass('llanta-popup-show');
+            $('.menu-icon.menu-icon-llanta').removeClass('active');
+        }
+    });
+
+    return false;
+}
