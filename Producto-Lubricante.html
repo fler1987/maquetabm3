@@ -27,7 +27,7 @@
 </head>
 <body>
     <div class="page-wrapper">
-
+        
         <header class="header animate">
             <div class="container container-1770">
                 <div class="header-wrapper">
@@ -592,672 +592,523 @@
         </header>
 
         <section class="main">
-            <section class="block-section block-section-bg bg-category" style="background-image: url(assets/images/categoria-llanta.jpg);">
+            <section class="block-section block-nav">
+                <div class="container container-1170">
+                    <div class="block-header">
+                        <div class="header-left">
+                            <div class="header-title">
+                                <nav class="breadcrumb">
+                                    <a class="bread-text" href="#">
+                                        <span class="text">Inicio</span>
+                                    </a>
+                                    <span class="separate">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </span>
+                                    <a class="bread-text" href="#">
+                                        <span class="text">Lugricantes</span>
+                                    </a>
+                                    <span class="separate">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </span>
+                                    <span class="bread-text">MOTUL 3000 ACEITE MOTOR 20W50</span>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="header-right"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="block-section block-product">
                 <div class="container container-1170">
                     <div class="block-content">
-                        <h1>Llantas</h1>
-                    </div>
-                </div>
-            </section>
-            <section class="block-section block-llanta">
-                <div class="container container-1170">
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link active" id="llanta-buscar-medida-tab" data-bs-toggle="pill" data-bs-target="#llanta-buscar-medida" type="button" role="tab" aria-controls="llanta-buscar-medida" aria-selected="true">
-							<i class="fa-regular fa-tire"></i> <span>Buscar por medida</span>
-						  </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="llanta-buscar-vehiculo-tab" data-bs-toggle="pill" data-bs-target="#llanta-buscar-vehiculo" type="button" role="tab" aria-controls="llanta-buscar-vehiculo" aria-selected="false">
-							<i class="fa-regular fa-motorcycle"></i> <span>Buscar por vehículo</span>
-						  </button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="llanta-buscar-medida" role="tabpanel" aria-labelledby="llanta-buscar-medida-tab" tabindex="0">						
-							<a href="javascript:void(0)" class="info-lectura" onclick="llantaPopup();">
-								<i class="fa-solid fa-circle-question"></i> <span>Cómo leer tu neumático</span>
-							</a>
-                            <div class="block-form">
-                                <div class="row">
-                                    <div class="row-item col-input col-md-3">
-                                        <div class="form-field">
-                                            <label class="form-label" for="data-ancho">Ancho</label>
-                                            <select class="form-input" id="data-ancho" name="data-ancho">
-                                                <option>XXX / --- / ---</option>
-                                            </select>
+                        <div class="product-view product-view ">
+                            <div class="product-view-information">
+                                <div class="product-view-left product-view-images">
+                                    <div class="product-view-images-wrapper">
+										<div class="product-view-zoom">
+											<i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center" title="Clic en la imagen para ampliar"></i>
+										</div>
+                                        <div class="row product-view-nav" data-arrow="false">
+                                            <div class="row-item product-view-image">
+                                                <div class="media image-zoom" data-zoom-image="assets/images/lubricante.png" data-fancybox="gallery" data-src="assets/images/lubricante.png">
+                                                    <img src="assets/images/lubricante.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="row-item product-view-image">
+                                                <div class="media image-zoom" data-zoom-image="assets/images/lubricante.png" data-fancybox="gallery" data-src="assets/images/moto.png">
+                                                    <img src="assets/images/moto.png" alt="" />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row-item col-input col-md-3">
-                                        <div class="form-field">
-                                            <label class="form-label" for="data-perfil">Perfil</label>
-                                            <select class="form-input" id="data-perfil" name="data-perfil">
-                                                <option>--- / XXX / ---</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row-item col-input col-md-3">
-                                        <div class="form-field">
-                                            <label class="form-label" for="data-aro">Tamaño del aro</label>
-                                            <select class="form-input" id="data-aro" name="data-aro">
-                                                <option>--- / --- / XXX</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row-item col-button col-md-3">
-                                        <div class="form-action">
-                                            <a href="javascript:void(0);" class="button button-alt" onclick="action();">
-                                                <span class="text icon">Buscar</span>
-                                                <i class="fa-solid fa-magnifying-glass"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-							<div class="info-llanta">
-								<span><i class="fa-regular fa-circle-info"></i> Confirme la medida de las llantas de su vehículo antes de colocar su pedido. Recomendamos consultar el manual de su vehículo o revisar la etiqueta en el marco de la puerta del conductor.</span>
-							</div>
-                        </div>
-                        <div class="tab-pane fade" id="llanta-buscar-vehiculo" role="tabpanel" aria-labelledby="llanta-buscar-vehiculo-tab" tabindex="1">
-                            <div class="search-llanta">
-								<div class="search-llanta-form">
-									<input type="text" placeholder="Escribe la marca o modelo de tu moto" autocomplete="off" id="searchProductLlanta">
-									<button type="submit" class="button button-search icon-search">
-										<i class="las la-search"></i>
-									</button>
-									<button type="submit" class="button icon-cancel" id="searchClearLlanta">
-										<i class="las la-times"></i>
-									</button>
-								</div>
-								<div class="search-llanta-result d-none">
-									<div class="search-result-list"></div>
-									<div class="search-result-button d-flex justify-content-center">
-										<a href="javascript:void(0);" class="button button-alt">
-											<span class="text">Ver todos los productos</span>
-										</a>
-									</div>
-								</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="block-section block-popular popular-collection">
-                <div class="container container-1170">
-                    <div class="block-content">
-                        <div class="block-slide" data-category-slide="" data-items-xs="4" data-items-sm="4" data-items-md="5" data-items-lg="5">
-                            <div class="row slide-items">
-                                <div class="row-item">
-                                    <div class="wrapper-item">
-                                        <div class="image-box">
-                                            <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/llanta.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="content content-box-column col-center">
-                                            <p class="content-title">
-                                                <a href="#">
-                                                    <span class="text text-uppercase">Doble propósito</span>
+                                    <div class="product-view-thumbnail-wrapper">
+                                        <div class="row product-view-for" data-arrow="false">
+                                            <div class="row-item product-view-thumbnail" data-product-nav="data-negro">
+                                                <a class="product-view-thumbnail-link" href="javascript:void(0)">
+                                                    <img src="assets/images/lubricante.png" alt="" />
                                                 </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-item">
-                                    <div class="wrapper-item">
-                                        <div class="image-box">
-                                            <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/llanta.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="content content-box-column col-center">
-                                            <p class="content-title">
-                                                <a href="#">
-                                                    <span class="text text-uppercase">Pisteras</span>
+                                            </div>
+                                            <div class="row-item product-view-thumbnail" data-product-nav="data-negro">
+                                                <a class="product-view-thumbnail-link" href="javascript:void(0)">
+                                                    <img src="assets/images/moto.png" alt="" />
                                                 </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-item">
-                                    <div class="wrapper-item">
-                                        <div class="image-box">
-                                            <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/llanta.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="content content-box-column col-center">
-                                            <p class="content-title">
-                                                <a href="#">
-                                                    <span class="text text-uppercase">Scooter</span>
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-item">
-                                    <div class="wrapper-item">
-                                        <div class="image-box">
-                                            <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/llanta.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="content content-box-column col-center">
-                                            <p class="content-title">
-                                                <a href="#">
-                                                    <span class="text text-uppercase">Cuatrimoto</span>
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-item">
-                                    <div class="wrapper-item">
-                                        <div class="image-box">
-                                            <a href="#" class="image image-round animate-scale">
-                                                <img src="assets/images/llanta.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="content content-box-column col-center">
-                                            <p class="content-title">
-                                                <a href="#">
-                                                    <span class="text text-uppercase">Cross</span>
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="block-section block-collection">
-                <div class="container container-1170">
-                    <div class="collection-wrapper">
-                        <div class="collection-sidebar sidebar">
-                            <div class="sidebar-header text-left">
-                                <a href="javascript:void(0)" class="sidebar-close" data-close-sidebar="" role="button">
-                                    <span class="visually-hidden">Close</span>
-                                    <i class="las la-times"></i>
-                                </a>
-                            </div>
-                            <div class="sidebar-wrapper custom-scrollbar">
-                                <div class="sidebar-title">
-                                    <div class="sidebar-title-wrapper">
-                                        <h3 class="sidebar-title-heading">
-                                            <span class="icon">
-                                                <i class="fa-solid fa-filter"></i>
-                                            </span>
-                                            <span>Filtros</span>
-                                        </h3>
-                                    </div>
-                                </div>
-								<div class="sidebar-block filter-text">
-                                    <div class="sidebar-block-wrapper">
-                                        <h3 class="sidebar-block-heading is-clicked">
-                                            <span>Tipos de Llanta</span>
-                                            <span class="icon">
-                                                <i class="fa-solid fa-angle-down"></i>
-                                            </span>
-                                        </h3>
-                                    </div>
-                                    <div class="sidebar-block-content" style="display: block;">
-                                        <ul class="sidebar-list list-unstyled custom-scrollbar">
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.tipollanta" value="idData" id="filter-tipollanta-1">
-                                                <label for="filter-tipollanta-1" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>Doble propósito</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.tipollanta" value="idData" id="filter-tipollanta-2">
-                                                <label for="filter-tipollanta-2" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>Pisteras</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.tipollanta" value="idData" id="filter-tipollanta-3">
-                                                <label for="filter-tipollanta-3" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>Scooter</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.tipollanta" value="idData" id="filter-tipollanta-4">
-                                                <label for="filter-tipollanta-4" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>Cuatrimoto</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.tipollanta" value="idData" id="filter-tipollanta-5">
-                                                <label for="filter-tipollanta-5" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>Cross</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-								<div class="sidebar-block filter-text">
-                                    <div class="sidebar-block-wrapper">
-                                        <h3 class="sidebar-block-heading">
-                                            <span>Marca</span>
-                                            <span class="icon">
-                                                <i class="fa-solid fa-angle-down"></i>
-                                            </span>
-                                        </h3>
-                                    </div>
-                                    <div class="sidebar-block-content" style="display: none;">
-                                        <ul class="sidebar-list list-unstyled custom-scrollbar">
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.marca" value="idData" id="filter-marca-1">
-                                                <label for="filter-marca-1" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>Pirelli</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.marca" value="idData" id="filter-marca-2">
-                                                <label for="filter-marca-2" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>Powersports</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.marca" value="idData" id="filter-marca-3">
-                                                <label for="filter-marca-3" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>Timsun</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-								<div class="sidebar-block filter-text">
-                                    <div class="sidebar-block-wrapper">
-                                        <h3 class="sidebar-block-heading">
-                                            <span>Aro</span>
-                                            <span class="icon">
-                                                <i class="fa-solid fa-angle-down"></i>
-                                            </span>
-                                        </h3>
-                                    </div>
-                                    <div class="sidebar-block-content" style="display: none;">
-                                        <ul class="sidebar-list list-unstyled custom-scrollbar">
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.aro" value="idData" id="filter-aro-1">
-                                                <label for="filter-aro-1" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>R8</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.aro" value="idData" id="filter-aro-2">
-                                                <label for="filter-aro-2" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>5</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.aro" value="idData" id="filter-aro-3">
-                                                <label for="filter-aro-3" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>7</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-								<div class="sidebar-block filter-text">
-                                    <div class="sidebar-block-wrapper">
-                                        <h3 class="sidebar-block-heading">
-                                            <span>Medidas</span>
-                                            <span class="icon">
-                                                <i class="fa-solid fa-angle-down"></i>
-                                            </span>
-                                        </h3>
-                                    </div>
-                                    <div class="sidebar-block-content" style="display: none;">
-                                        <ul class="sidebar-list list-unstyled custom-scrollbar">
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.medida" value="idData" id="filter-medida-1">
-                                                <label for="filter-medida-1" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>100/90-17</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.medida" value="idData" id="filter-medida-2">
-                                                <label for="filter-medida-2" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>100/80-17</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.medida" value="idData" id="filter-medida-3">
-                                                <label for="filter-medida-3" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>100/70-17</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-								<div class="sidebar-block filter-text">
-                                    <div class="sidebar-block-wrapper">
-                                        <h3 class="sidebar-block-heading">
-                                            <span>Precio</span>
-                                            <span class="icon">
-                                                <i class="fa-solid fa-angle-down"></i>
-                                            </span>
-                                        </h3>
-                                    </div>
-                                    <div class="sidebar-block-content" style="display: none;">
-                                        <ul class="sidebar-list list-unstyled custom-scrollbar">
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.precio" value="idData" id="filter-precio-1">
-                                                <label for="filter-precio-1" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>S/100.00 - 150.00</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.precio" value="idData" id="filter-precio-2">
-                                                <label for="filter-precio-2" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>S/150.00 - 200.00</span>
-                                                </label>
-                                            </li>
-                                            <li class="sidebar-item">
-                                                <input type="checkbox" name="filter.precio" value="idData" id="filter-precio-3">
-                                                <label for="filter-precio-3" class="sidebar-checkbox form-label-checkbox">
-                                                    <span>Más de S/250.00</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collection-content page-content">
-                            <div class="toolbar collection-toolbar">
-                                <div class="toolbar-item toolbar-left">
-                                    <div class="filter-group filter-result">
-                                        <h3>Todas las llantas<span class="result-total">75</span></h3>
-                                    </div>
-                                </div>
-                                <div class="toolbar-item toolbar-right">
-                                    <div class="filter-group filter-order">
-                                        <span class="text text-uppercase">Ordenar por</span>
-                                        <span class="icon">
-                                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                                        </span>
-                                        <span class="option">
-                                            <select class="select-bm3 select-order">
-                                                <option>Recomendados</option>
-                                                <option>Últimos productos</option>
-                                                <option>Popularidad</option>
-                                                <option>Precio más bajo</option>
-                                                <option>Precio más alto</option>
-                                            </select>
-                                        </span>
-                                    </div>
-                                    <div class="filter-group filter-sidebar" data-sidebar="">
-                                        <span class="filter-icon">
-                                            <i class="fa-solid fa-filter"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="collection-product">
-                                <div class="row">
-                                    <div class="row-item col-12 col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                                        <div class="product-item">
-                                            <div class="product-item-top">
-                                                <div class="product-item-media">
-                                                    <a href="#" class="animate-scale">
-                                                        <img src="assets/images/llanta.png" alt="" />
-                                                    </a>
-                                                    <div class="product-item-action">
-                                                        <a class="button" href="#">Agregar</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-bottom">
-                                                <div class="product-item-information">
-                                                    <a class="" href="#">
-                                                        <p class="product-item-brand">
-                                                            <span class="text text-uppercase">Marca</span>
-                                                        </p>
-                                                        <p class="product-item-colors">
-                                                            <span class="color-option" style="color:#D74826;"><i class="fa-solid fa-circle"></i></span>
-                                                            <span class="color-option" style="color:#5C5C5C;"><i class="fa-solid fa-circle"></i></span>
-                                                        </p>
-                                                        <p class="product-item-name">
-                                                            <span class="text text-uppercase">Producto</span>
-                                                        </p>
-                                                        <p class="product-item-price">
-                                                            <span class="price-offer">S/1,000</span>
-                                                            <span class="price-old">S/1,234</span>
-                                                        </p>
-                                                        <p class="product-item-additional">
-                                                            <span class="text">Black</span>
-                                                            <span class="discount">-15%</span>
-                                                        </p>
-                                                    </a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row-item col-12 col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                                        <div class="product-item">
-                                            <div class="product-item-top">
-                                                <div class="badge-custom">
-                                                </div>
-                                                <div class="product-item-media">
-                                                    <a href="#" class="animate-scale">
-                                                        <img src="assets/images/llanta.png" alt="" />
-                                                    </a>
-                                                    <div class="product-item-action">
-                                                        <a class="button" href="#">Agregar</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-bottom">
-                                                <div class="product-item-information">
-                                                    <a class="" href="#">
-                                                        <p class="product-item-brand">
-                                                            <span class="text text-uppercase">Marca</span>
-                                                        </p>
-                                                        <p class="product-item-colors">
-                                                            <span class="color-option" style="color:#D74826;"><i class="fa-solid fa-circle"></i></span>
-                                                            <span class="color-option" style="color:#5C5C5C;"><i class="fa-solid fa-circle"></i></span>
-                                                        </p>
-                                                        <p class="product-item-name">
-                                                            <span class="text text-uppercase">Producto</span>
-                                                        </p>
-                                                        <p class="product-item-price">
-                                                            <span class="price-normal">S/1,000</span>
-                                                            <span class="price-normal">-</span>
-                                                            <span class="price-normal">S/1,000</span>
-                                                        </p>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                </div>
+                                <div class="product-view-right product-view-details">
+                                    <div class="product-detail-discount">
+                                        <span class="text">-30%</span>
+                                    </div>
+                                    <div class="product-detail-brand">
+                                        <span class="text">MOTUL</span>
+                                    </div>
+                                    <div class="product-detail-name">
+                                        <span class="text text-uppercase">3000 ACEITE MOTOR 20W50</span>
+                                    </div>
+                                    <div class="product-detail-sku">
+                                        <span class="text text-uppercase">SKU: MOT102772</span>
+                                    </div>
+                                    <div class="product-detail-price">
+                                        <span class="price price-normal">S/27.90</span>
+                                    </div>
+                                    <div class="product-detail-info">
+                                        <p>Lubricante 4 tiempos. Proteccion del motor y la caja de cambios a elevadas temperaturas. Responde a las especificaciones de Harley Davidson. Cumple con las especificaciones de JASO MA2 para un funcionamiento optimo del embriague sumergido. Compatible con catalizadores.</p>
+                                    </div>
+                                    <div class="product-detail-variants">
+                                        <div class="variants-group">
+                                            <label class="product-option-category">
+                                                <span>Categoría:</span> <span>ACEITE MOTOR</span>
+                                            </label>
                                         </div>
                                     </div>
-                                    <div class="row-item col-12 col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                                        <div class="product-item">
-                                            <div class="product-item-top">
-                                                <div class="badge-custom">
-                                                </div>
-                                                <div class="product-item-media">
-                                                    <a href="#" class="animate-scale">
-                                                        <img src="assets/images/llanta.png" alt="" />
-                                                    </a>
-                                                    <div class="product-item-action">
-                                                        <a class="button" href="#">Agregar</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-bottom">
-                                                <div class="product-item-information">
-                                                    <a class="" href="#">
-                                                        <p class="product-item-brand">
-                                                            <span class="text text-uppercase">Marca</span>
-                                                        </p>
-                                                        <p class="product-item-colors">
-                                                            <span class="color-option" style="color:#D74826;"><i class="fa-solid fa-circle"></i></span>
-                                                            <span class="color-option" style="color:#5C5C5C;"><i class="fa-solid fa-circle"></i></span>
-                                                        </p>
-                                                        <p class="product-item-name">
-                                                            <span class="text text-uppercase">Producto</span>
-                                                        </p>
-                                                        <p class="product-item-price">
-                                                            <span class="price-offer">S/1,000</span>
-                                                            <span class="price-old">S/1,234</span>
-                                                            <span class="discount">-15%</span>
-                                                        </p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="product-view-stock">
+                                        <span class="badge badge-stock">4 productos disponible en stock</span>
                                     </div>
-                                    <div class="row-item col-12 col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                                        <div class="product-item">
-                                            <div class="product-item-top">
-                                                <div class="badge-custom">
+                                    <hr />
+                                    <div class="product-detail-action">
+                                        <div class="action-group">
+                                            <div class="action-box">
+                                                <div class="product-detail-action button-action-add">
+                                                    <a class="button button-add" href="#"><span class="text">Agregar</span> <i class="las la-shopping-cart"></i></a>
                                                 </div>
-                                                <div class="product-item-media">
-                                                    <a href="#" class="animate-scale">
-                                                        <img src="assets/images/llanta.png" alt="" />
-                                                    </a>
-                                                    <div class="product-item-action">
-                                                        <a class="button" href="#">Agregar</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-bottom">
-                                                <div class="product-item-information">
-                                                    <a class="" href="#">
-                                                        <p class="product-item-brand">
-                                                            <span class="text text-uppercase">Marca</span>
-                                                        </p>
-                                                        <p class="product-item-colors">
-                                                            <span class="color-option" style="color:#D74826;"><i class="fa-solid fa-circle"></i></span>
-                                                            <span class="color-option" style="color:#5C5C5C;"><i class="fa-solid fa-circle"></i></span>
-                                                        </p>
-                                                        <p class="product-item-name">
-                                                            <span class="text text-uppercase">Producto</span>
-                                                        </p>
-                                                        <p class="product-item-price">
-                                                            <span class="text">S/1,000</span>
-                                                        </p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row-item col-12 col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                                        <div class="product-item">
-                                            <div class="product-item-top">
-                                                <div class="badge-custom">
-                                                </div>
-                                                <div class="product-item-media">
-                                                    <a href="#" class="animate-scale">
-                                                        <img src="assets/images/llanta.png" alt="" />
-                                                    </a>
-                                                    <div class="product-item-action">
-                                                        <a class="button" href="#">Agregar</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-bottom">
-                                                <div class="product-item-information">
-                                                    <a class="" href="#">
-                                                        <p class="product-item-brand">
-                                                            <span class="text text-uppercase">Marca</span>
-                                                        </p>
-                                                        <p class="product-item-colors">
-                                                            <span class="color-option" style="color:#D74826;"><i class="fa-solid fa-circle"></i></span>
-                                                            <span class="color-option" style="color:#5C5C5C;"><i class="fa-solid fa-circle"></i></span>
-                                                        </p>
-                                                        <p class="product-item-name">
-                                                            <span class="text text-uppercase">Producto</span>
-                                                        </p>
-                                                        <p class="product-item-price">
-                                                            <span class="text">S/1,000</span>
-                                                        </p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row-item col-12 col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                                        <div class="product-item">
-                                            <div class="product-item-top">
-                                                <div class="badge-custom">
-                                                </div>
-                                                <div class="product-item-media">
-                                                    <a href="#" class="animate-scale">
-                                                        <img src="assets/images/llanta.png" alt="" />
-                                                    </a>
-                                                    <div class="product-item-action">
-                                                        <a class="button" href="#">Agregar</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-bottom">
-                                                <div class="product-item-information">
-                                                    <a class="" href="#">
-                                                        <p class="product-item-brand">
-                                                            <span class="text text-uppercase">Marca</span>
-                                                        </p>
-                                                        <p class="product-item-colors">
-                                                            <span class="color-option" style="color:#D74826;"><i class="fa-solid fa-circle"></i></span>
-                                                            <span class="color-option" style="color:#5C5C5C;"><i class="fa-solid fa-circle"></i></span>
-                                                        </p>
-                                                        <p class="product-item-name">
-                                                            <span class="text text-uppercase">Producto</span>
-                                                        </p>
-                                                        <p class="product-item-price">
-                                                            <span class="text">S/1,000</span>
-                                                        </p>
-                                                    </a>
+                                                <div class="product-detail-action button-action-whatsapp">
+                                                    <a class="button button-whatsapp" href="#"><span class="text">Contacta con un asesor</span> <i class="lab la-whatsapp"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="collection-pagination">
-                                <ul class="pagination-list list-unstyled">
-                                    <li class="pagination-arrow disabled">
-                                        <span class="pagination-item pagination-item-arrow pagination-item-disabled">
-                                            <i class="las la-angle-left"></i>
-                                        </span>
+                            <div class="product-view-tab layout-horizontal">
+                                <ul class="nav nav-tabs tabs-horizontal" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-product-tab1">Descripción</a>
                                     </li>
-                                    <li class="pagination-num">
-                                        <a href="#" class="pagination-item active">1</a>
-                                    </li>
-                                    <li class="pagination-num">
-                                        <a href="#" class="pagination-item">2</a>
-                                    </li>
-                                    <li class="pagination-num">
-                                        <span class="pagination-item pagination-item-disabled" href="#">3</span>
-                                    </li>
-                                    <li class="pagination-num">
-                                        <a href="#" class="pagination-item">4</a>
-                                    </li>
-                                    <li class="pagination-num">
-                                        <a href="#" class="pagination-item">5</a>
-                                    </li>
-                                    <li class="pagination-num">
-                                        <span class="pagination-item pagination-item-none">...</span>
-                                    </li>
-                                    <li class="pagination-num">
-                                        <a href="#" class="pagination-item">8</a>
-                                    </li>
-                                    <li class="pagination-num">
-                                        <a href="#" class="pagination-item">9</a>
-                                    </li>
-                                    <li class="pagination-num">
-                                        <a href="#" class="pagination-item">10</a>
-                                    </li>
-                                    <li class="pagination-arrow next style-2">
-                                        <a href="#" class="pagination-item pagination-item-arrow">
-                                            <i class="las la-angle-right"></i>
-                                        </a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-product-tab2">Especificaciones</a>
                                     </li>
                                 </ul>
+                                <div class="tab-content tabs-contents-horizontal">
+                                    <div class="tab-pane fade active show" id="tab-product-tab1" tabindex="0">
+                                        <div class="product-view-toogle">
+                                            <h3 class="product-view-toogle-title is-clicked">
+                                                <span>Descripción</span>
+                                                <span class="icon"></span>
+                                            </h3>
+                                            <div class="product-view-toogle-content" style="display: block;">
+                                                <div class="product-view-tech">
+                                                    <div class="product-view-tech-block">
+                                                        <div class="product-view-tech-content" style="display: block;">
+                                                            <div class="product-view-tech-wrapper">
+                                                                <div class="row">
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">TS-651</span>
+                                                                            <span class="tech-detail text-uppercase">MODELO</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">130</span>
+                                                                            <span class="tech-detail text-uppercase">ANCHO</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">Timsun</span>
+                                                                            <span class="tech-detail text-uppercase">FABRICANTE</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">100km/hr</span>
+                                                                            <span class="tech-detail text-uppercase">ÍNDICE DE VELOCIDAD</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">Pulgadas</span>
+                                                                            <span class="tech-detail text-uppercase">UNIDAD DE DIÁMETRO</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">R13</span>
+                                                                            <span class="tech-detail text-uppercase">SUB FAMILIA</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-view-tech-block">
+                                                        <h3 class="product-view-tech-title is-clicked">
+                                                            <span>Características</span>
+                                                            <span class="icon"></span>
+                                                        </h3>
+                                                        <div class="product-view-tech-content" style="display: block;">
+                                                            <div class="product-view-tech-wrapper">
+                                                                <div class="row">
+                                                                    <div class="row-item col-md-6 col-lg-6">
+                                                                        <div class="info-feature">
+                                                                            <span class="feature-detail">Responde a las especificaciones de Harley Davidson</span>
+                                                                        </div>
+                                                                        <div class="info-feature">
+                                                                            <span class="feature-detail">Lubricante reforzado con aditivos de extrema precision</span>
+                                                                        </div>
+                                                                        <div class="info-feature">
+                                                                            <span class="feature-detail">Propiedades lubricantes elevadas para reducir el desgaste y aumentar la vida util de los motores</span>
+                                                                        </div>
+                                                                        <div class="info-feature">
+                                                                            <span class="feature-detail">Fabricación con caucho 100% natural de talón a talón para mayor duración, agarre y flexibilidad, esto evita quiebres en la banda de rodamiento.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-6">
+                                                                        <div class="info-feature">
+                                                                            <span class="feature-detail">La huella de la banda de rodamiento brinda gran efectividad para la dispersión del agua para un alto rendimiento en mojado.</span>
+                                                                        </div>
+                                                                        <div class="info-feature">
+                                                                            <span class="feature-detail">Sellado uniforme revestimiento de toda la superficie interna.</span>
+                                                                        </div>
+                                                                        <div class="info-feature">
+                                                                            <span class="feature-detail">Uso de vulcanizadora automatizada que garantiza mayor resistencia del caucho y mejor sellado de lonas.</span>
+                                                                        </div>
+                                                                        <div class="info-feature">
+                                                                            <span class="feature-detail">80% PISTA / 20% TIERRA</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+												</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-product-tab2" tabindex="1">
+                                        <div class="product-view-toogle">
+                                            <h3 class="product-view-toogle-title is-clicked">
+                                                <span>Información Adicional</span>
+                                                <span class="icon"></span>
+                                            </h3>
+                                            <div class="product-view-toogle-content" style="display: block;">
+                                                <div class="product-view-tech">
+													<div class="product-view-tech-button">
+														<a class="button button-alt button-file" href="#"><span class="text">Contacta con un asesor</span> <i class="lab la-whatsapp"></i></a>
+													</div>
+                                                    <div class="product-view-tech-block">
+                                                        <h3 class="product-view-tech-title is-clicked">
+                                                            <span>Características Técnicas</span>
+                                                            <span class="icon"></span>
+                                                        </h3>
+                                                        <div class="product-view-tech-content" style="display: block;">
+                                                            <div class="product-view-tech-wrapper">
+                                                                <div class="row">
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">TS-651</span>
+                                                                            <span class="tech-detail text-uppercase">MODELO</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">130</span>
+                                                                            <span class="tech-detail text-uppercase">ANCHO</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">Timsun</span>
+                                                                            <span class="tech-detail text-uppercase">FABRICANTE</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">100km/hr</span>
+                                                                            <span class="tech-detail text-uppercase">ÍNDICE DE VELOCIDAD</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">Pulgadas</span>
+                                                                            <span class="tech-detail text-uppercase">UNIDAD DE DIÁMETRO</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-item col-md-6 col-lg-4">
+                                                                        <div class="info-tech">
+                                                                            <span class="tech-name">R13</span>
+                                                                            <span class="tech-detail text-uppercase">SUB FAMILIA</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="block-section block-standout product-frequently">
+                <div class="container container-1170">
+                    <div class="block-header">
+                        <div class="header-left">
+                            <div class="header-title">
+                                <h3 class="text-uppercase">Frecuentemente comprados juntos</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-content">
+                        <div class="block-slide slide-plus" data-product-slide="" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="4">
+                            <div class="row slide-items product-items">
+                                <div class="row-item">
+                                    <div class="product-item item-alt">
+                                        <div class="product-item-top">
+                                            <div class="badge-custom">
+                                                <span class="badge badge-offer">Oferta ⚡</span>
+                                            </div>
+                                            <div class="ranking-custom">
+                                                <span class="ranking text-uppercase">Top<span>5</span></span>
+                                            </div>
+                                            <div class="add-custom">
+                                                <a href="#" class="animate-scale">
+                                                    <img src="assets/images/icon-carrito.svg" />
+                                                </a>
+                                            </div>
+                                            <div class="product-item-media">
+                                                <a href="#" class="animate-scale">
+                                                    <img src="assets/images/producto.png" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-bottom">
+                                            <div class="product-item-information">
+                                                <a class="" href="#">
+                                                    <p class="product-item-brand">
+                                                        <span class="text text-uppercase">Marca</span>
+                                                    </p>
+                                                    <p class="product-item-name">
+                                                        <span class="text text-uppercase">Producto</span>
+                                                    </p>
+                                                    <p class="product-item-price">
+                                                        <span class="price-normal">S/1,000</span>
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="block-section block-standout product-frequently">
+                <div class="container container-1170">
+                    <div class="block-header">
+                        <div class="header-left">
+                            <div class="header-title">
+                                <h3 class="text-uppercase">Productos relacionados</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-content">
+                        <div class="block-slide" data-product-slide="" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="4">
+                            <div class="row slide-items product-items">
+                                <div class="row-item">
+                                    <div class="product-item item-alt">
+                                        <div class="product-item-top">
+                                            <div class="badge-custom">
+                                                <span class="badge badge-offer">Oferta ⚡</span>
+                                            </div>
+                                            <div class="ranking-custom">
+                                                <span class="ranking text-uppercase">Top<span>5</span></span>
+                                            </div>
+                                            <div class="product-item-media">
+                                                <a href="#" class="animate-scale">
+                                                    <img src="assets/images/producto.png" alt="" />
+                                                </a>
+                                                <div class="product-item-action">
+                                                    <a class="button" href="#">Agregar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-bottom">
+                                            <div class="product-item-information">
+                                                <a class="" href="#">
+                                                    <p class="product-item-brand">
+                                                        <span class="text text-uppercase">Marca</span>
+                                                    </p>
+                                                    <p class="product-item-name">
+                                                        <span class="text text-uppercase">Producto</span>
+                                                    </p>
+                                                    <p class="product-item-price">
+                                                        <span class="price-normal">S/1,000</span>
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-item">
+                                    <div class="product-item item-alt">
+                                        <div class="product-item-top">
+                                            <div class="badge-custom">
+                                                <span class="badge badge-new">Nuevo ⭐</span>
+                                                <span class="badge badge-offer">Oferta ⚡</span>
+                                            </div>
+                                            <div class="ranking-custom">
+                                                <span class="ranking text-uppercase">Top<span>5</span></span>
+                                            </div>
+                                            <div class="product-item-media">
+                                                <a href="#" class="animate-scale">
+                                                    <img src="assets/images/producto.png" alt="" />
+                                                </a>
+                                                <div class="product-item-action">
+                                                    <a class="button" href="#">Agregar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-bottom">
+                                            <div class="product-item-information">
+                                                <a class="" href="#">
+                                                    <p class="product-item-brand">
+                                                        <span class="text text-uppercase">Marca</span>
+                                                    </p>
+                                                    <p class="product-item-name">
+                                                        <span class="text text-uppercase">Producto</span>
+                                                    </p>
+                                                    <p class="product-item-price">
+                                                        <span class="price-offer">S/1,000</span>
+                                                        <span class="price-old">S/1,234</span>
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-item">
+                                    <div class="product-item item-alt">
+                                        <div class="product-item-top">
+                                            <div class="badge-custom">
+                                                <span class="badge badge-sold-out">Agotado ❌</span>
+                                            </div>
+                                            <div class="product-item-media">
+                                                <a href="#" class="animate-scale">
+                                                    <img src="assets/images/producto.png" alt="" />
+                                                </a>
+                                                <div class="product-item-action">
+                                                    <a class="button" href="#">Agregar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-bottom">
+                                            <div class="product-item-information">
+                                                <a class="" href="#">
+                                                    <p class="product-item-brand">
+                                                        <span class="text text-uppercase">Marca</span>
+                                                    </p>
+                                                    <p class="product-item-name">
+                                                        <span class="text text-uppercase">Producto</span>
+                                                    </p>
+                                                    <p class="product-item-price">
+                                                        <span class="text">S/1,000</span>
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-item">
+                                    <div class="product-item item-alt">
+                                        <div class="product-item-top">
+                                            <div class="badge-custom">
+                                                <span class="badge badge-new">Nuevo ⭐</span>
+                                            </div>
+                                            <div class="product-item-media">
+                                                <a href="#" class="animate-scale">
+                                                    <img src="assets/images/producto.png" alt="" />
+                                                </a>
+                                                <div class="product-item-action">
+                                                    <a class="button" href="#">Agregar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-bottom">
+                                            <div class="product-item-information">
+                                                <a class="" href="#">
+                                                    <p class="product-item-brand">
+                                                        <span class="text text-uppercase">Marca</span>
+                                                    </p>
+                                                    <p class="product-item-name">
+                                                        <span class="text text-uppercase">Producto</span>
+                                                    </p>
+                                                    <p class="product-item-price">
+                                                        <span class="text">S/1,000</span>
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-item">
+                                    <div class="product-item item-alt">
+                                        <div class="product-item-top">
+                                            <div class="badge-custom">
+                                                <span class="badge badge-offer">Oferta ⚡</span>
+                                            </div>
+                                            <div class="product-item-media">
+                                                <a href="#" class="animate-scale">
+                                                    <img src="assets/images/producto.png" alt="" />
+                                                </a>
+                                                <div class="product-item-action">
+                                                    <a class="button" href="#">Agregar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-bottom">
+                                            <div class="product-item-information">
+                                                <a class="" href="#">
+                                                    <p class="product-item-brand">
+                                                        <span class="text text-uppercase">Marca</span>
+                                                    </p>
+                                                    <p class="product-item-name">
+                                                        <span class="text text-uppercase">Producto</span>
+                                                    </p>
+                                                    <p class="product-item-price">
+                                                        <span class="text">S/1,000</span>
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1367,13 +1218,13 @@
                                     <li>
                                         <div class="footer-icon">
                                             <a href="#" class="link footer-link-social facebook">
-                                                <img src="assets/images/icon-facebook-white.svg" alt="" />
+                                                <img src="assets/images/icon-facebook-white.svg" />
                                             </a>
                                             <a href="#" class="link footer-link-social instagram">
-                                                <img src="assets/images/icon-instagram-white.svg" alt="" />
+                                                <img src="assets/images/icon-instagram-white.svg" />
                                             </a>
                                             <a href="#" class="link footer-link-social tiktok">
-                                                <img src="assets/images/icon-tiktok-white.svg" alt="" />
+                                                <img src="assets/images/icon-tiktok-white.svg" />
                                             </a>
                                         </div>
                                     </li>
@@ -1613,7 +1464,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/llanta.png" alt="" />
+                                                            <img src="assets/images/producto.png" alt="" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1640,7 +1491,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/llanta.png" alt="" />
+                                                            <img src="assets/images/producto.png" alt="" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1667,7 +1518,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/llanta.png" alt="" />
+                                                            <img src="assets/images/producto.png" alt="" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1693,7 +1544,7 @@
                                                     </div>
                                                     <div class="product-item-media">
                                                         <a href="#" class="animate-scale">
-                                                            <img src="assets/images/llanta.png" alt="" />
+                                                            <img src="assets/images/producto.png" alt="" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1726,21 +1577,18 @@
                     <a href="javascript:void(0)" class="popup-close clearfix" data-close-account-popup="">
                         <i class="las la-times"></i>
                     </a>
-                    <div class="account-popup-form">
+                    <div class="account-popup-form form-login">
                         <div class="form-title">
                             <h3>Iniciar Sesión</h3>
                         </div>
                         <div class="form-field">
-                            <label class="form-label" for="email-login">
-                                Correo Electrónico<em>*</em>
-                            </label>
-                            <input class="form-input form-input-placeholder" type="email" name="email-login" value="" placeholder="Correo Electrónico">
+                            <label class="form-label" for="email-login">Correo Electrónico</label>
+                            <input class="form-input form-input-placeholder" type="text" id="email-login" name="email-login" value="" placeholder="Escribe tu correo electrónico">
                         </div>
                         <div class="form-field">
-                            <label class="form-label" for="password-login">
-                                Contraseña <em>*</em>
-                            </label>
-                            <input class="form-input form-input-placeholder" type="password" name="password-login" value="" required="" placeholder="Contraseña">
+                            <label class="form-label" for="password-login">Contraseña</label>
+                            <input class="form-input form-input-placeholder" type="password" id="password-login" name="password-login" value="" required="" placeholder="Escribe tu Contraseña">
+                            <span class="password-toogle show"><i class="fa-solid fa-eye"></i></span>
                         </div>
                         <div class="form-actions auth-actions text-center">
                             <a href="javascript:void(0);" class="auth-link link">
@@ -1748,7 +1596,7 @@
                             </a>
                         </div>
                         <div class="form-actions auth-actions text-center">
-                            <a href="javascript:void(0);" class="button button-alt button-signup">
+                            <a href="javascript:void(0);" class="button button-alt" onclick="formSuccess();">
                                 <span class="text">Iniciar Sesión</span>
                             </a>
                         </div>
@@ -1758,40 +1606,259 @@
                         <div class="form-actions auth-actions text-center">
                             <a href="javascript:void(0);" class="button button-google">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
-                                    <defs>
-                                        <path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path>
-                                    </defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use>
-                                    </clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"></path><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path>
+                                    <defs> <path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></defs>
+                                    <clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath>
+                                    <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"></path><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path>
                                 </svg>
                                 <span class="text">Continua con Google</span>
                             </a>
                             <a href="javascript:void(0);" class="button button-facebook">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" version="1">
-                                    <path fill="#FFFFFF" d="M32 30a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h28a2 2 0 0 1 2 2v28z"></path>
-                                    <path fill="#4267b2" d="M22 32V20h4l1-5h-5v-2c0-2 1.002-3 3-3h2V5h-4c-3.675 0-6 2.881-6 7v3h-4v5h4v12h5z"></path>
+                                    <path fill="#FFFFFF" d="M32 30a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h28a2 2 0 0 1 2 2v28z"></path><path fill="#4267b2" d="M22 32V20h4l1-5h-5v-2c0-2 1.002-3 3-3h2V5h-4c-3.675 0-6 2.881-6 7v3h-4v5h4v12h5z"></path>
                                 </svg>
                                 <span class="text">Continua con Facebook</span>
                             </a>
                         </div>
                         <div class="form-actions auth-actions text-center">
-                            <a href="javascript:void(0);" class="auth-link link">
+                            <a href="javascript:void(0);" class="auth-link link" onclick="formRegister();">
                                 <span class="text">¿No tienes una cuenta? <strong>Regístrate</strong></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="account-popup-form form-register d-none">
+                        <div class="form-title">
+                            <h3>Crea tu cuenta</h3>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="name-register">Nombre Completo</label>
+                            <input class="form-input form-input-placeholder" type="text" id="name-register" name="name-register" value="" placeholder="Escribe tus Nombres y Apellidos">
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="email-register">Correo Electrónico</label>
+                            <input class="form-input form-input-placeholder" type="text" id="email-register" name="email-register" value="" placeholder="Escribe tu Correo Electrónico">
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="reemail-register">Confirmar Correo Electrónico</label>
+                            <input class="form-input form-input-placeholder" type="text" id="reemail-register" name="reemail-register" value="" placeholder="Confirma tu Correo Electrónico">
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="password-register">Contraseña</label>
+                            <input class="form-input form-input-placeholder" type="password" id="password-register" name="password-register" value="" required="" placeholder="Escribe tu Contraseña">
+                            <span class="password-toogle show"><i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="repassword-register">Confirmar Contraseña</label>
+                            <input class="form-input form-input-placeholder" type="password" id="repassword-register" name="repassword-register" value="" required="" placeholder="Confirma tu Contraseña">
+                            <span class="password-toogle show"><i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <div class="form-actions auth-actions text-center">
+                            <a href="javascript:void(0);" class="button button-alt" onclick="formSuccess();">
+                                <span class="text">Iniciar Sesión</span>
+                            </a>
+                        </div>
+                        <div class="form-actions auth-actions text-center">
+                            <a href="javascript:void(0);" class="auth-link link" onclick="formLogin();">
+                                <span class="text">¿Ya tienes una cuenta? <strong>Regístrate</strong></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="account-popup-form form-success d-none">
+                        <div class="form-icon text-center">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                                <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"></circle>
+                                <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "></polyline>
+                            </svg>
+                        </div>
+                        <div class="form-title text-center">
+                            <h3>¡Felicidades!</h3>
+                        </div>
+                        <div class="form-info text-center">
+                            <p>Su cuenta ha sido creada exitosamente.</p>
+                        </div>
+                        <div class="form-actions auth-actions text-center">
+                            <a href="javascript:void(0);" class="button button-alt">
+                                <span class="text">Hecho</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="llanta-popup">
+	
+        <div class="finance-popup">
             <div class="container container-1170">
-                <div class="llanta-popup-wrapper">
-                    <a href="javascript:void(0)" class="popup-close clearfix" data-close-llanta-popup="">
+                <div class="finance-popup-wrapper">
+                    <a href="javascript:void(0)" class="popup-close clearfix" data-close-finance-popup="">
                         <i class="las la-times"></i>
                     </a>
-                    <div class="llanta-popup-form">
-					<div class="">
-						<img src="assets/images/medida-llantas.jpg" class="img" />
+                    <div class="block-finance">
+                        <div class="container">
+                            <div class="block-header">
+                                <div class="header-left">
+                                    <div class="header-title">
+                                        <h3 class="text-uppercase">Financiamiento</h3>
+                                        <p>¿Necesitas ayuda para comprar tu moto? Solo completa nuestro formulario para brindarte financiamiento.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-content custom-scrollbar">
+                                <div class="block-form block-form-start">
+                                    <div class="form-title">
+                                        <h3>Información Personal</h3>
+                                    </div>
+                                    <div class="row">
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field">
+                                                <label class="form-label" for="data-name">Nombre Completo</label>
+                                                <input class="form-input form-input-placeholder" type="text" id="data-name" name="data-name" value="" placeholder="Ingresa tus nombres y apellidos">
+                                            </div>
+                                        </div>
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field">
+                                                <label class="form-label" for="data-celular">Celular</label>
+                                                <input class="form-input form-input-placeholder" type="text" id="data-celular" name="data-celular" value="" placeholder="Ingresa tu celular">
+                                            </div>
+                                        </div>
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field">
+                                                <label class="form-label" for="data-fechanacimiento">Fecha de Nacimiento</label>
+                                                <input class="form-input form-input-placeholder" type="text" id="data-fechanacimiento" name="data-fechanacimiento" value="" placeholder="Seleccione la fecha">
+                                            </div>
+                                        </div>
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field">
+                                                <label class="form-label" for="data-email">Correo Electrónico</label>
+                                                <input class="form-input form-input-placeholder" type="text" id="data-email" name="data-email" value="" placeholder="Ingresa tu correo electrónico">
+                                            </div>
+                                        </div>
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field">
+                                                <label class="form-label" for="data-tipodocumento">Tipo de Documento</label>
+                                                <select class="form-input" id="data-tipodocumento" name="data-tipodocumento">
+                                                    <option>-Seleccione-</option>
+                                                    <option>DNI</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field">
+                                                <label class="form-label" for="data-nrodocumento">Nro. de Documento</label>
+                                                <input class="form-input form-input-placeholder" type="text" id="data-nrodocumento" name="data-nrodocumento" value="" placeholder="Ingresa tus nro. de documento">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-form form-complete">
+                                    <div class="form-title">
+                                        <h3>Información Personal</h3>
+                                    </div>
+                                    <div class="row">
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field">
+                                                <div class="form-radio">
+                                                    <label>
+                                                        <input name="data-laboral" id="data-dependiente" class="radio" type="radio" checked>
+                                                        <span class="radio-item">
+                                                            <span>Soy Dependiente</span>
+                                                            <span>Estoy en planilla en la empresa en la que trabajo</span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field">
+                                                <div class="form-radio">
+                                                    <label>
+                                                        <input name="data-laboral" id="data-independiente" class="radio" type="radio">
+                                                        <span class="radio-item">
+                                                            <span>Soy Independiente</span>
+                                                            <span>Realizo trabajos y/o servicios por Recibo por Honorarios</span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-item col-md-12">
+                                            <div class="form-field" style="margin-bottom: 0;">
+                                                <span class="label-title">¿Cuánto es tu cuota inicial?</span>
+                                            </div>
+                                        </div>
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field form-currency">
+                                                <label class="form-label" for="data-cuotaminima">Cuota inicial mínima 500 soles</label>
+                                                <label class="form-label-currency" for="data-cuotaminima">s/</label>
+                                                <input class="form-input form-input-currency form-input-placeholder" type="text" id="data-cuotaminima" name="data-cuotaminima" value="" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field form-currency">
+                                                <label class="form-label" for="data-cuotaminima">¿Cuánto es tu ingreso mensual?</label>
+                                                <label class="form-label-currency" for="data-ingreso">s/</label>
+                                                <input class="form-input form-input-currency form-input-placeholder" type="text" id="data-ingreso" name="data-ingreso" value="" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-form block-form-end">
+                                    <div class="form-title">
+                                        <h3>Moto a Financiar</h3>
+                                    </div>
+                                    <div class="row">
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="row">
+                                                <div class="row-item col-md-12">
+                                                    <div class="form-field">
+                                                        <label class="form-label" for="data-tipomoto">Tipo de Moto</label>
+                                                        <select class="form-input" id="data-tipomoto" name="data-tipomoto">
+                                                            <option>-Seleccione-</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row-item col-md-12">
+                                                    <div class="form-field">
+                                                        <label class="form-label" for="data-modelomoto">Modelo</label>
+                                                        <select class="form-input" id="data-modelomoto" name="data-modelomoto">
+                                                            <option>-Seleccione-</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-item col-md-12 col-lg-6">
+                                            <div class="form-field">
+                                                <div class="form-image">
+                                                    <img src="assets/images/lubricante.png" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="row-item col-md-12">
+                                            <div class="form-field">
+                                                <div class="form-checkbox">
+                                                    <label for="data-privacidad">
+                                                        <input type="checkbox" id="data-privacidad" name="data-privacidad" />
+                                                        <span>He leído y acepto la política de privacidad</span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-checkbox">
+                                                    <label for="data-comunicacion">
+                                                        <input type="checkbox" id="data-comunicacion" name="data-comunicacion" />
+                                                        <span>Acepto recibir comunicaciones comerciales de LA EMPRESA</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-action">
+                                    <a href="#" class="button">
+                                        <span class="text">Solicitar Financiamiento</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
