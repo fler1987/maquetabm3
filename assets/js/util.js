@@ -246,9 +246,6 @@ function cerrarPopup() {
         .appendTo("head");
 
     $(".block-form-end").css("opacity", "0.5");
-
-
-
 }
 
 
@@ -329,6 +326,11 @@ function productColorSelection(valor, texto, precio, descuento, tipoMoneda, tipo
         }
         $("#priceChange").hide();
     }   
+}
+
+function productItemSelection(valor, texto) {
+    console.log(texto + ' - ' + texto);
+    $('[data-item-option]').html(texto);
 }
 
 $('#searchProduct').keyup(function () {

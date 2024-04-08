@@ -866,6 +866,11 @@ button[disabled] {
     background-color: #189200;
 }
 
+.badge-custom .badge.badge-available {
+    color: #ffffff;
+    background-color: #189200;
+}
+
 .badge-custom .badge.badge-offer {
     color: #000000;
     background-color: #ffbb49;
@@ -941,14 +946,14 @@ button[disabled] {
 
 .add-custom a {
     display: inline-block;
-    border-radius: 3px;
+    border-radius: 5px;
     background: #e10303;
-    padding: 10px;
+    padding: 7px 10px;
 }
 
 .add-custom img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
 
 .content-box-row {
@@ -3669,6 +3674,10 @@ body.open-mobile-sidebar .background-overlay {
     padding: 15px 50px;
 }
 
+.block-standout.product-related {
+    padding: 0 0 50px 0;
+}
+
 .block-standout.product-frequently {
     padding: 0 0 50px 0;
 }
@@ -4618,6 +4627,24 @@ body.open-mobile-sidebar .background-overlay {
     border-radius: 5px;
 }
 
+.block-product .product-view-information .product-view-images {
+}
+
+.block-product .product-view-information .product-view-images .badge {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.block-product .product-view-information .product-view-images .badge-custom {
+    top: 35px;
+}
+
+.block-product .product-view-information .product-view-images .badge {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+	padding: 5px 15px;
+}
+
 .block-product .product-view-information .product-view-images .row {
     margin-left: -5px;
     margin-right: -5px;
@@ -4644,6 +4671,10 @@ body.open-mobile-sidebar .background-overlay {
 
 .block-product .product-view-information .product-view-images .row .row-item.product-view-image img {
     margin: 0 auto;
+}
+
+.block-product .product-view-information .product-view-images .row .row-item.product-view-image .image-zoom {
+	cursor: ew-resize;
 }
 
 .block-product .product-view-information .product-view-images .product-view-thumbnail {
@@ -4886,24 +4917,7 @@ body.open-mobile-sidebar .background-overlay {
 
 .block-product .product-view-information .product-detail-variants {
     display: block;
-    margin: 0 0 25px 0;
-}
-
-.block-product .product-view-information .product-detail-variants .product-option-select {
-    display: block;
-    margin: 0 0 4px;
-}
-
-.block-product .product-view-information .product-detail-variants .product-option-select span {
-    font-weight: 400;
-	font-size: 10px;
-    color: #222831;
-	text-transform: uppercase;
-}
-
-.block-product .product-view-information .product-detail-variants .product-option-select span + span {
-	font-size: 12px;
-    font-weight: 600;
+    margin: 0 0 20px 0;
 }
 
 .block-product .product-view-information .product-detail-variants .product-option-category {
@@ -4920,24 +4934,46 @@ body.open-mobile-sidebar .background-overlay {
 
 .block-product .product-view-information .product-detail-variants .product-option-category span + span {
 	font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
-.block-product .product-view-information .product-detail-variants .product-options {
+.block-product .product-view-information .product-detail-variants .product-option-select {
+    display: block;
+    margin: 0 0 4px;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-select span {
+    font-weight: 700;
+	font-size: 10px;
+    color: #222831;
+	text-transform: uppercase;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-select span + span {
+	font-size: 12px;
+    font-weight: 500;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-color {
+    display: block;
+    margin: 0 0 4px;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-color .product-options {
     position: relative;
     font-size: 0;
     line-height: 0;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option {
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option {
     position: relative;
     display: inline-block;
     width: 200px;
     margin: 15px 15px 0 0;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option input[type=checkbox],
-.block-product .product-view-information .product-detail-variants .product-option input[type=radio] {
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option input[type=checkbox],
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option input[type=radio] {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
@@ -4945,7 +4981,7 @@ body.open-mobile-sidebar .background-overlay {
     overflow: hidden;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option .item-option {
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4958,38 +4994,52 @@ body.open-mobile-sidebar .background-overlay {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    border: 1px solid #b1b1b1;
     border-radius: 5px;
+    border: 1px solid #b1b1b1;
+	background: #ffffff;
     cursor: pointer;
     overflow: hidden;
     transition: all .3s;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option .item-option:hover,
-.block-product .product-view-information .product-detail-variants .product-option .item-value:checked+.item-option {
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option:hover {
     border-color: #e10303;
     transition: all .3s;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option .item-option .option-image {
-    background: #f5f5f5;
-    padding: 10px;
-    width: 50%;
-    border-right: 1px solid #c2c2c2;
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-value:checked+.item-option {
+    border-color: #DC4504;
+    transition: all .3s;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option .item-option .option-image img {
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-image {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    padding: 5px 10px;
+    width: 50%;
+    border-right: 1px solid #c2c2c2;
+    transition: all .3s;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-value:checked+.item-option .option-image {
+    background: #fcede6;
+	border-color: #cfa28f;
+    transition: all .3s;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-image img {
     max-width: 100%;
     max-height: 70px;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option .item-option .option-color {
-    background: #ffffff;
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-detail {
     padding: 5px 8px;
     width: 50%;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option .item-option .option-color .option-value {
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-detail .option-value {
     display: block;
     font-size: 12px;
     line-height: 22px;
@@ -4997,7 +5047,7 @@ body.open-mobile-sidebar .background-overlay {
     color: #222831;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option .item-option .option-color .option-price {
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-detail .option-price {
     display: block;
     font-size: 14px;
     line-height: 18px;
@@ -5005,7 +5055,11 @@ body.open-mobile-sidebar .background-overlay {
     color: #5b5b5b;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option .item-option .option-color .option-status {
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-detail .option-price span {
+    font-size: 10px;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-detail .option-status {
     display: block;
     font-size: 10px;
     line-height: 20px;
@@ -5013,8 +5067,116 @@ body.open-mobile-sidebar .background-overlay {
     color: #059d26;
 }
 
-.block-product .product-view-information .product-detail-variants .product-option .item-option .option-color .option-status i {
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-detail .option-status.available {
+    color: #059d26;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-detail .option-status.sold-out {
+    color: #ED1D24;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-detail .option-status i {
     padding-right: 5px;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option input[type=checkbox][disabled],
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option input[type=radio][disabled] {
+	cursor: not-allowed;
+	opacity: .5;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option.disabled {
+	border: 1px solid #b1b1b1;
+    background: #ffffff;
+	cursor: not-allowed;
+	opacity: .5;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item {
+    display: block;
+    margin: 0 0 4px;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-options {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option {
+    position: relative;
+    display: inline-block;
+	width: 50px;
+    margin: 15px 15px 0 0;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option input[type=checkbox],
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option input[type=radio] {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option .item-option {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #b1b1b1;
+	background: #ffffff;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option .item-option:hover {
+    border-color: #e10303;
+    transition: all .3s;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option .item-value:checked+.item-option {
+    border-color: #DC4504;
+    transition: all .3s;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option .item-option .option-detail {
+    padding: 5px 8px;
+	width: 100%;
+	text-align: center;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option .item-option .option-detail .option-value {
+    display: block;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #222831;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option input[type=checkbox][disabled],
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option input[type=radio][disabled] {
+	cursor: not-allowed;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option .item-option.disabled {
+	border: 1px solid #EEEEEE;
+    background: #EEEEEE;
+	cursor: not-allowed;
+}
+
+.block-product .product-view-information .product-detail-variants .product-option-item .product-option .item-option.disabled .option-detail .option-value {
+	color: #C4C4C4;
 }
 
 .block-product .product-view-information .product-view-stock {
@@ -5422,17 +5584,17 @@ body.open-mobile-sidebar .background-overlay {
         line-height: 15px;
     }
 
-    .block-product .product-view-information .product-detail-variants .product-option {}
+    .block-product .product-view-information .product-detail-variants .product-option-color .product-option {}
 
-    .block-product .product-view-information .product-detail-variants .product-option .item-option .option-image {
+    .block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-image {
         width: 150px;
     }
 
-    .block-product .product-view-information .product-detail-variants .product-option .item-option .option-image img {
+    .block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-image img {
         max-width: 80px;
     }
 
-    .block-product .product-view-information .product-detail-variants .product-option .item-option .option-color {
+    .block-product .product-view-information .product-detail-variants .product-option-color .product-option .item-option .option-detail {
         width: 100%;
         padding: 5px 15px;
     }
@@ -5642,7 +5804,7 @@ body.open-mobile-sidebar .background-overlay {
 }
 
 @media (max-width: 480px) {
-    .block-product .product-view-information .product-detail-variants .product-option {
+    .block-product .product-view-information .product-detail-variants .product-option-color .product-option {
         width: 100%;
     }
 
