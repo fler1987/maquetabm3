@@ -597,6 +597,10 @@ button[disabled] {
     border-radius: 50%;
 }
 
+.image-round-group {
+    border-radius: 10px;
+}
+
 .image-box {
     display: block;
     position: relative;
@@ -3221,6 +3225,8 @@ body.open-mobile-sidebar .background-overlay {
     font-size: 12px;
     line-height: 12px;
     margin-right: 1px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,1);
 }
 
 .block-section .product-item-name {
@@ -3478,7 +3484,7 @@ body.open-mobile-sidebar .background-overlay {
 .block-nav .block-header {
     border-bottom: 1px solid #c5c5c5;
     margin-bottom: 0;
-    padding: 0 15px;
+    padding: 0;
 }
 
 .block-nav .toolbar {}
@@ -4154,6 +4160,29 @@ body.open-mobile-sidebar .background-overlay {
 .block-popular.popular-category {
     position: relative;
     padding: 25px 0 0 0;
+}
+
+.block-popular.popular-group {
+    position: relative;
+    padding: 25px 0 85px 0;
+}
+
+.block-popular.popular-group .content-title {
+	font-family: 'Outfit';
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+	text-decoration: underline;
+}
+
+.block-popular.popular-group .row .row-item {
+        flex: 0 0 auto;
+        width: 20%;
+        padding: 0 15px;
+}
+
+.block-popular.popular-group .image-box .image {
+	padding: 25px;
 }
 
 .block-popular.popular-collection {
@@ -5941,6 +5970,7 @@ body.open-mobile-sidebar .background-overlay {
     font-weight: 500;
     padding: 0 5px;
     background: #ffffff;
+	border-radius: 5px;
 }
 
 .block-info .block-form .form-field .form-input {
@@ -6151,6 +6181,7 @@ body.open-mobile-sidebar .background-overlay {
     font-weight: 600;
     padding: 0 5px;
     background: #ffffff;
+	border-radius: 5px;
 }
 
 .block-finance .block-form .form-field .form-input {
@@ -7057,13 +7088,15 @@ body.finance-popup-show .finance-popup {
 
 .block-llanta .block-form .form-field .form-label {
     position: absolute;
-    top: -10px;
+    top: -6px;
     left: 9px;
     color: #444444;
-    font-size: 13px;
     font-weight: 600;
+    font-size: 13px;
+	line-height: 13px;
     padding: 0 5px;
     background: #ffffff;
+	border-radius: 5px;
 }
 
 .block-llanta .block-form .form-field .form-input {
@@ -7075,7 +7108,7 @@ body.finance-popup-show .finance-popup {
     color: #232323;
     background-color: #fff;
     width: 100%;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .block-llanta .block-form .form-field .form-input:hover {
@@ -7332,4 +7365,101 @@ body.llanta-popup-show .background-overlay-popup {
     }
 }
 
+.block-repuesto {
+    position: relative;
+    padding: 50px 0 35px 0;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+}
 
+.block-repuesto .block-form .form-title {
+	margin-bottom: 25px;
+}
+
+.block-repuesto .block-form .form-title h3 {
+	font-family: 'Bai Jamjuree';
+	font-size: 24px;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+.block-repuesto .block-form .form-field {
+    position: relative;
+    display: block;
+    margin: 15px 0px;
+}
+
+.block-repuesto .block-form .form-field .form-label {
+    position: absolute;
+    top: -6px;
+    left: 9px;
+    color: #444444;
+    font-weight: 600;
+    font-size: 13px;
+	line-height: 13px;
+    padding: 0 5px;
+    background: #ffffff;
+	border-radius: 5px;
+}
+
+.block-repuesto .block-form .form-field .form-input {
+    display: block;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #c7c7c7;
+    color: #232323;
+    background-color: #fff;
+    width: 100%;
+    font-weight: 400;
+}
+
+.block-repuesto .block-form .form-field .form-input:hover {
+    border-color: #8f8f8f;
+}
+
+.block-repuesto .block-form .form-field.disabled {
+    position: relative;
+    display: block;
+    margin: 15px 0px;
+}
+
+.block-repuesto .block-form .form-field.disabled .form-label {
+    color: #919191;
+}
+
+.block-repuesto .block-form .form-field.disabled .form-input {
+    border: 1px solid #b7b7b7;
+	background: #eeeeee;
+	color: #919191;
+	
+}
+
+.block-repuesto .block-form .form-action {
+    display: block;
+    margin-top: 15px;
+}
+
+.block-repuesto .block-form .form-action .button {
+    width: 100%;
+    padding: 5px 15px 4px 15px;
+    line-height: 40px;
+}
+
+.block-repuesto .block-form .form-action .text {
+    display: inline-block;
+}
+
+.block-repuesto .block-form .form-action .icon {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.block-repuesto .block-form .col-input {
+    flex: 0 0 auto;
+    width: 27%;
+}
+
+.block-repuesto .block-form .col-button {
+    flex: 0 0 auto;
+    width: 19%;
+}
