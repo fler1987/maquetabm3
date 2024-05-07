@@ -491,13 +491,15 @@ button span,
     color: #ffffff;
 }
 
-.button.button-whatsapp {
+.button.button-whatsapp,
+.button.button-line {
     background-color: #ffffff;
     border-color: #000;
     color: #000;
 }
 
-.button.button-whatsapp:hover {
+.button.button-whatsapp:hover,
+.button.button-line:hover {
     background-color: #000;
     border-color: #000;
     color: #ffffff;
@@ -7376,7 +7378,7 @@ body.llanta-popup-show .background-overlay-popup {
 }
 
 .block-repuesto .block-form .form-title h3 {
-	font-family: 'Bai Jamjuree';
+	font-family: 'Bai Jamjuree', sans-serif;
 	font-size: 24px;
 	font-weight: 500;
 	letter-spacing: 1px;
@@ -7431,7 +7433,6 @@ body.llanta-popup-show .background-overlay-popup {
     border: 1px solid #b7b7b7;
 	background: #eeeeee;
 	color: #919191;
-	
 }
 
 .block-repuesto .block-form .form-action {
@@ -7462,4 +7463,525 @@ body.llanta-popup-show .background-overlay-popup {
 .block-repuesto .block-form .col-button {
     flex: 0 0 auto;
     width: 19%;
+}
+
+.block-account {
+    position: relative;
+    padding: 50px 0 35px 0;
+}
+
+.block-account .account-info {
+    position: relative;
+    padding: 0 0 15px 0;
+}
+
+.block-account .account-info .row-item {
+    position: relative;
+	display: flex;
+}
+
+.block-account .account-info .col-account-image {
+    position: relative;
+	width: 65px;
+	flex: 0 0 auto;
+}
+
+.block-account .account-info .col-account-user {
+    position: relative;
+	padding-left: 15px;
+}
+
+.block-account .account-info .col-account-user .user-p1 {
+	display: block;
+	margin-top: 5px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #605f5f;
+}
+
+.block-account .account-info .col-account-user .user-p2 {
+	display: block;
+	font-size: 22px;
+	font-weight: 500;
+	color: #44464b;
+}
+
+.block-account .account-info .col-account-session {
+    position: relative;
+	padding-top: 25px;
+}
+
+.block-account .account-tabs {
+    position: relative;
+	padding-top: 10px;
+}
+
+.block-account .nav-pills .nav-link {
+    color: #000000;
+    background-color: #ffffff;
+    border-bottom: 5px solid #ffffff;
+    border-radius: 0;
+    padding: 5px 5px 10px 5px;
+    margin-right: 35px;
+}
+
+.block-account .nav-pills .nav-link span {
+    font-family: 'Outfit', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.block-account .nav-pills .nav-link i {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.block-account .nav-pills .nav-link.active {
+    color: #000000;
+    background-color: #ffffff;
+    border-bottom: 5px solid #ED1D24;
+    border-radius: 0;
+}
+
+.block-account .account-section {
+    position: relative;
+	padding-bottom: 35px;
+}
+
+@media (min-width: 992px) {
+	.block-account .account-section .col-auto {
+		flex: 1;
+	}
+	
+	.block-account .account-section .col-100 {
+		flex: 0 0 auto;
+		width: 100px;
+	}
+	
+	.block-account .account-section .col-150 {
+		flex: 0 0 auto;
+		width: 150px;
+	}
+	
+	.block-account .account-section .col-200 {
+		flex: 0 0 auto;
+		width: 200px;
+	}
+	
+	.block-account .account-section .col-250 {
+		flex: 0 0 auto;
+		width: 250px;
+	}
+	
+	.block-account .account-section .col-300 {
+		flex: 0 0 auto;
+		width: 300;
+	}
+}
+
+.block-account .account-section .card-empty {
+	display: inline-block;
+    height: 12px;
+    width: 50px;
+    position: relative;
+}
+
+.block-account .account-section .card-visa {
+	display: inline-block;
+    height: 12px;
+    width: 50px;
+    background-image: url(../cards/visa.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 1px;
+}
+
+.block-account .account-section .card-amex {
+	display: inline-block;
+    height: 12px;
+    width: 50px;
+    background-image: url(../cards/amex.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 1px;
+}
+
+.block-account .account-section .card {
+	position: relative;
+	border-radius: 7px;
+	box-shadow: -2px 2px 3px 0px rgba(0,0,0,0.1);
+	overflow: hidden;
+}
+
+.block-account .account-section .card .card-header {
+	position: relative;
+	padding: 15px;
+    background-color: rgba(255, 255, 255, 0);
+	overflow: hidden;
+}
+
+.block-account .account-section .card .card-header:first-child {
+	border-radius: initial;
+}
+
+.block-account .account-section .card .card-body {
+	position: relative;
+	padding: 15px;
+	overflow: hidden;
+}
+
+.block-account .account-section .card .card-body.card-body-item {
+	position: relative;
+	padding: 0;
+}
+
+.block-account .account-section .card .card-body.card-body-resumen {
+	position: relative;
+	padding: 0;
+}
+
+.block-account .account-section .card h3 {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 5px 0;
+}
+
+.block-account .account-section .card h3 span {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-left: 10px;
+}
+
+.block-account .account-section .card a.link-float {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.block-account .account-section .card a.link-float span {
+    display: inline-block;
+	padding-right: 5px;
+}
+
+.block-account .account-section .card a.link-float i {
+    display: inline-block;
+}
+
+.block-account .account-section .account-detail {
+	padding: 10px 0;
+}
+
+.block-account .account-section .account-detail h4 {
+	color: #222831;
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.block-account .account-section .account-detail h5 {
+	color: #7c7c7c;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+.block-account .account-section .account-address {
+	padding: 10px 0;
+}
+
+.block-account .account-section .account-address h4 {
+	color: #222831;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.block-account .account-section .account-address h5 {
+	color: #222831;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.block-account .account-section .account-address a {
+	margin-top: 15px;
+	font-size: 12px;
+	padding: 8px 20px;
+}
+
+.block-account .account-section .account-title {
+	padding: 10px 0;
+}
+
+.block-account .account-section .account-title h4 {
+	color: #222831;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	letter-spacing: 1px;
+}
+
+.block-account .account-section .account-title h5 {
+	color: #222831;
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 0;
+}
+
+.block-account .account-section .account-title h5.status {
+	font-weight: 600;
+}
+
+.block-account .account-section .account-title a {
+	width: 100%;
+}
+
+.block-account .account-section .account-item {
+	padding: 15px;
+	border-bottom: 1px solid rgba(0,0,0,.125);
+	align-items: center;
+}
+
+.block-account .account-section .account-item:last-child {
+	padding: 15px;
+	border-bottom: none;
+	align-items: center;
+}
+
+.block-account .account-section .account-item .account-item-image {
+	overflow: hidden;
+	background: #f5f5f5;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+.block-account .account-section .account-item .account-item-detail {
+	padding: 10px 0;	
+}
+
+.block-account .account-section .account-item .account-item-detail h4 {
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0 0 5px 0;
+}
+
+.block-account .account-section .account-item .account-item-detail h4 a {
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+.block-account .account-section .account-item .account-item-detail h5 {
+	font-size: 14px;
+	font-weight: 400;
+	margin: 10px 0 0 0;
+}
+
+.block-account .account-section .account-item .account-item-link {
+	padding: 10px 0;
+}
+
+.block-account .account-section .account-item .account-item-link a {
+	width: 100%;
+}
+
+.block-account .account-section .account-resumen-title {
+	padding: 0;
+}
+
+.block-account .account-section .account-resumen-title h3 {
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 25px;
+}
+
+.block-account .account-section .account-resumen-title h6 {
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+.block-account .account-section .account-resumen {
+	padding: 0;
+}
+
+.block-account .account-section .account-resumen .row-separate {
+	border-right: 1px solid #dddddd;
+}
+
+.block-account .account-section .account-resumen .account-resumen-detail {
+	padding: 15px;
+}
+
+.block-account .account-section .account-resumen .account-resumen-detail h4 {
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0 0 25px 0;
+}
+
+.block-account .account-section .account-resumen .account-resumen-detail h5 {
+	font-size: 15px;
+	font-weight: 500;
+	margin: 0 0 15px 0;
+}
+
+.block-account .account-section .account-resumen .account-resumen-detail h6 {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.block-account .account-section .account-resumen .account-resumen-payment {
+	padding: 15px;
+}
+
+.block-account .account-section .account-resumen .account-resumen-payment h4 {
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0 0 25px 0;
+}
+
+.block-account .account-section .account-resumen .account-resumen-payment h5 {
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0 0 15px 0;
+}
+
+.block-account .account-section .account-resumen .account-resumen-amount {
+	padding: 15px;
+}
+
+.block-account .account-section .account-resumen .account-resumen-amount h4 {
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0 0 25px 0;
+}
+
+.block-account .account-section .account-resumen .account-resumen-amount h5 {
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0 0 15px 0;
+}
+
+.block-account .account-section .account-resumen .account-resumen-amount h5.total {
+	font-weight: 600;
+}
+
+.block-account .account-section .account-resumen .account-resumen-amount span {
+	float: right;
+}
+
+.block-account .account-section .account-resumen .stepper-wrapper {
+	margin-top: auto;
+	display: flex;
+	justify-content: space-between;
+	margin: 25px 0;
+}
+
+.block-account .account-section .account-resumen .stepper-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+}
+	
+@media (max-width: 768px) {
+	.block-account .account-section .account-resumen .stepper-item {
+			font-size: 12px;
+	}
+}
+
+.block-account .account-section .account-resumen  .stepper-item::before {
+	position: absolute;
+	content: "";
+	border-bottom: 2px solid #ccc;
+	width: 100%;
+	top: 20px;
+	left: -50%;
+	z-index: 2;
+}
+
+.block-account .account-section .account-resumen .stepper-item::after {
+	position: absolute;
+	content: "";
+	border-bottom: 2px solid #ccc;
+	width: 100%;
+	top: 20px;
+	left: 50%;
+	z-index: 2;
+}
+
+.block-account .account-section .account-resumen .stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #dddddd;
+    color: #000000;
+    margin-bottom: 6px;
+    border: 5px solid #ffffff;
+}
+
+.block-account .account-section .account-resumen .stepper-item .step-name {
+	display: block;
+	width: 100px;
+	margin: 10px auto 0 auto;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: center;
+}
+
+.block-account .account-section .account-resumen .stepper-item.active {
+	font-weight: bold;
+}
+
+.block-account .account-section .account-resumen .stepper-item.completed .step-counter {
+	background-color: #24A941;
+	color: #ffffff;
+}
+
+.block-account .account-section .account-resumen .stepper-item.completed::after {
+	position: absolute;
+	content: "";
+	border-bottom: 2px solid #24A941;
+	width: 100%;
+	top: 20px;
+	left: 50%;
+	z-index: 3;
+}
+
+.block-account .account-section .account-resumen .stepper-item:first-child::before {
+	content: none;
+}
+
+.block-account .account-section .account-resumen .stepper-item:last-child::after {
+	content: none;
 }
