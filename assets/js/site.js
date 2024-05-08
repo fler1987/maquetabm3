@@ -25,6 +25,7 @@
             this.initCollapseSidebar();
             this.initCollapseProduct();
             this.initSliderProductoOwl();
+            this.initSliderProductoOwl2();
         },
         ready: function () {
             var url = window.location.pathname;
@@ -466,6 +467,34 @@
                     },
                     1400:{
                         items:3.5
+                    }
+                }
+            });
+        },
+        initSliderProductoOwl2: function () {
+            $('.block-slider-product-owl2').owlCarousel({
+                loop:true,
+                margin:20,
+                autoplay:true,
+                autoplayHoverPause: true,
+                nav:true,
+                navText: ["<i class='fa-solid fa-chevron-left'></i>","<i class='fa-solid fa-chevron-right'></i>"],
+                dots:false,
+                responsive:{
+                    0:{
+                        items:2
+                    },
+                    380:{
+                        items:3
+                    },
+                    768:{
+                        items:3
+                    },
+                    1024:{
+                        items:4
+                    },
+                    1400:{
+                        items:4
                     }
                 }
             });
