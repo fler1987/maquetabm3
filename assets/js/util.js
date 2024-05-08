@@ -202,14 +202,10 @@ function financePopup(idMarca,idProduct,nomMarca) {
     return false;
 }
 
-
 function cerrarPopup() {
- 
     if ($('body').hasClass('finance-popup-show')) {
         $('body').removeClass('finance-popup-show');
     }
-
-
 
     $('#txtNombre').val('');
     $('#txtCelular').val('');
@@ -452,6 +448,27 @@ function llantaPopup() {
         if ($('body').hasClass('llanta-popup-show')) {
             $('body').removeClass('llanta-popup-show');
             $('.menu-icon.menu-icon-llanta').removeClass('active');
+        }
+    });
+
+    return false;
+}
+
+function cartPopup() {
+	event.preventDefault();
+	event.stopPropagation();
+		
+    //remover otros popup
+	$('body').removeClass('cart-popup-show');
+	$('body').addClass('cart-popup-show');
+
+    var accountClose = $('[data-close-cart-popup]');
+    accountClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('cart-popup-show')) {
+            $('body').removeClass('cart-popup-show');
         }
     });
 
