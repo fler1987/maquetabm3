@@ -9443,7 +9443,7 @@ body.llanta-popup-show .background-overlay-popup {
     content: "\f111";
     font-size: 25px;
     top: 23px;
-    right: 23px;
+    right: 28px;
     color: #959595;
 }
 
@@ -9456,7 +9456,7 @@ body.llanta-popup-show .background-overlay-popup {
     color: #000000;
 }
 
-.block-cart .cart-section .cart-shipping label{
+.block-cart .cart-section .cart-shipping label {
 	display: flex;
     align-items: center;
     gap: 20px;
@@ -9465,6 +9465,10 @@ body.llanta-popup-show .background-overlay-popup {
     top: 0;
     left: 30px;
     cursor: pointer;
+}
+
+.block-cart .cart-section .cart-shipping label img {
+	width: 35px;
 }
 
 .block-cart .cart-section .cart-shipping label h6{
