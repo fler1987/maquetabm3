@@ -26,6 +26,7 @@
             this.initCollapseProduct();
             this.initSliderProductoOwl();
             this.initSliderProductoOwl2();
+            this.initInputSpinner();
         },
         ready: function () {
             var url = window.location.pathname;
@@ -498,6 +499,14 @@
                     }
                 }
             });
+        },
+        initInputSpinner: function () {
+			$("input[type='number']").inputSpinner({
+				decrementButton: "<i class='fa-solid fa-minus'></i>",
+				incrementButton: "<i class='fa-solid fa-plus'></i>",
+				buttonsClass: "btn-spinner",
+				buttonsWidth: "25px",
+			});
         },
     };
 })(jQuery);
