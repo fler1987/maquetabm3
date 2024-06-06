@@ -647,7 +647,7 @@
 									<div class="card">
 										<div class="card-header">
 											<h3>Datos Personales</h3>
-											<a href="" class="link-float">
+											<a href="#" class="link-float" onclick="profilePopup();">
 												<span>Editar</span>
 												<i class="fa-solid fa-pen"></i>
 											</a>
@@ -680,7 +680,7 @@
 									<div class="card">
 										<div class="card-header">
 											<h3>Información de Entrega</h3>
-											<a href="" class="link-float">
+											<a href="#" class="link-float" onclick="addressPopup();">
 												<span>Editar</span>
 												<i class="fa-solid fa-pen"></i>
 											</a>
@@ -1444,7 +1444,7 @@
 															</div>
 															<div class="row-item col-md-12 col-150">
 																<div class="account-security-link">
-																	<a href="#">
+																	<a href="#" onclick="emailPopup();">
 																		<span>Editar</span>
 																		<i class="fa-solid fa-pen"></i>
 																	</a>
@@ -1462,7 +1462,7 @@
 															</div>
 															<div class="row-item col-md-12 col-150">
 																<div class="account-security-link">
-																	<a href="#">
+																	<a href="#" onclick="passwordPopup();">
 																		<span>Editar</span>
 																		<i class="fa-solid fa-pen"></i>
 																	</a>
@@ -1826,6 +1826,7 @@
         <div class="background-overlay-search"></div>
         <div class="background-overlay-popup"></div>
         <div class="background-overlay-zeynep"></div>
+        <div class="background-overlay-data"></div>
 
         <div class="menu-mobile zeynep">
             <a href="javascript:void(0)" class="zeynep-close" data-close-zeynep="" role="button">
@@ -2159,15 +2160,11 @@
                             <h3>Iniciar Sesión</h3>
                         </div>
                         <div class="form-field">
-                            <label class="form-label" for="email-login">
-                                Correo Electrónico<em>*</em>
-                            </label>
+                            <label class="form-label" for="">Correo Electrónico<em>*</em></label>
                             <input class="form-input form-input-placeholder" type="email" name="email-login" value="" placeholder="Correo Electrónico">
                         </div>
                         <div class="form-field">
-                            <label class="form-label" for="password-login">
-                                Contraseña <em>*</em>
-                            </label>
+                            <label class="form-label" for="">Contraseña <em>*</em></label>
                             <input class="form-input form-input-placeholder" type="password" name="password-login" value="" required="" placeholder="Contraseña">
                         </div>
                         <div class="form-actions auth-actions text-center">
@@ -2211,15 +2208,201 @@
             </div>
         </div>
 
-        <div class="llanta-popup">
+        <div class="data-profile data-popup">
             <div class="container container-1170">
-                <div class="llanta-popup-wrapper">
-                    <a href="javascript:void(0)" class="popup-close clearfix" data-close-llanta-popup="">
+                <div class="data-popup-wrapper">
+                    <a href="javascript:void(0)" class="popup-close clearfix" data-close-data-popup="">
                         <i class="las la-times"></i>
                     </a>
-                    <div class="llanta-popup-form">
-						<div class="">
-							<img src="assets/images/medida-llantas.jpg" class="img" />
+                    <div class="data-popup-form">
+						<div class="form-title">
+							<h3 class="text-uppercase">Datos Personales</h3>
+						</div>
+						<div class="form-block">
+							<div class="row">
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-profile-name">Nombre Completo</label>
+										<input class="form-input form-input-placeholder" type="text" id="data-profile-name" name="data-profile-name" value="" placeholder="Ingresa tus nombres y apellidos">
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-profile-celular">Celular</label>
+										<input class="form-input form-input-placeholder" type="text" id="data-profile-celular" name="data-profile-celular" value="" placeholder="Ingresa tu celular">
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-profile-fechanacimiento">Fecha de Nacimiento</label>
+										<input class="form-input form-input-placeholder" type="text" id="data-profile-fechanacimiento" name="data-profile-fechanacimiento" value="" placeholder="Seleccione la fecha">
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-profile-email">Correo Electrónico</label>
+										<input class="form-input form-input-placeholder" type="text" id="data-profile-email" name="data-profile-email" value="" placeholder="Ingresa tu correo electrónico">
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-profile-tipodocumento">Tipo de Documento</label>
+										<select class="form-input" id="data-profile-tipodocumento" name="data-profile-tipodocumento">
+											<option>-Seleccione-</option>
+											<option>DNI</option>
+										</select>
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-profile-nrodocumento">Nro. de Documento</label>
+										<input class="form-input form-input-placeholder" type="text" id="data-profile-nrodocumento" name="data-profile-nrodocumento" value="" placeholder="Ingresa tus nro. de documento">
+									</div>
+								</div>
+							</div>
+                        </div>
+						<div class="form-action">
+							<a href="#" class="button">
+								<span class="text">Guardar</span>
+							</a>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-address data-popup">
+            <div class="container container-1170">
+                <div class="data-popup-wrapper">
+                    <a href="javascript:void(0)" class="popup-close clearfix" data-close-data-popup="">
+                        <i class="las la-times"></i>
+                    </a>
+                    <div class="data-popup-form">
+						<div class="form-title">
+							<h3 class="text-uppercase">Dirección de Entrega</h3>
+						</div>
+						<div class="form-block">
+							<div class="row">
+								<div class="row-item col-md-12 col-lg-12">
+									<div class="form-field">
+										<label class="form-label" for="data-address-name">Nombre</label>
+										<input class="form-input form-input-placeholder" type="text" id="data-address-name" name="data-address-name" value="" placeholder="xxxxxxxx">
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-address-direccion">Dirección</label>
+										<input class="form-input form-input-placeholder" type="text" id="data-address-direccion" name="data-address-direccion" value="" placeholder="xxxxxxxx">
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-address-fechanacimiento">Urbanización</label>
+										<input class="form-input form-input-placeholder" type="text" id="data-address-fechanacimiento" name="data-address-fechanacimiento" value="" placeholder="xxxxxxxx">
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-address-departamento">Departamento</label>
+										<select class="form-input" id="data-address-departamento" name="data-address-departamento">
+											<option>-Departamento-</option>
+										</select>
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-address-provincia">Provincia</label>
+										<select class="form-input" id="data-address-provincia" name="data-address-provincia">
+											<option>-Provincia-</option>
+										</select>
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-address-distrito">Distrito</label>
+										<select class="form-input" id="data-address-distrito" name="data-address-distrito">
+											<option>-Provincia-</option>
+										</select>
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-6">
+									<div class="form-field">
+										<label class="form-label" for="data-address-postal">Código Postal</label>
+										<input class="form-input form-input-placeholder" type="text" id="data-address-postal" name="data-address-postal" value="" placeholder="xxxxxxxx">
+									</div>
+								</div>
+							</div>
+                        </div>
+						<div class="form-action">
+							<a href="#" class="button">
+								<span class="text">Guardar</span>
+							</a>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-email data-popup">
+            <div class="container container-1170">
+                <div class="data-popup-wrapper">
+                    <a href="javascript:void(0)" class="popup-close clearfix" data-close-data-popup="">
+                        <i class="las la-times"></i>
+                    </a>
+                    <div class="data-popup-form">
+						<div class="form-title">
+							<h3 class="text-uppercase">Correo Electrónico</h3>
+						</div>
+						<div class="form-block">
+							<div class="row">
+								<div class="row-item col-md-12 col-lg-12">
+									<div class="form-field">
+										<label class="form-label" for="data-email-name">Correo Electrónico</label>
+										<input class="form-input form-input-placeholder" type="text" id="data-email-name" name="data-email-name" value="" placeholder="xxxxxxxx">
+									</div>
+								</div>
+							</div>
+                        </div>
+						<div class="form-action">
+							<a href="#" class="button">
+								<span class="text">Guardar</span>
+							</a>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-password data-popup">
+            <div class="container container-1170">
+                <div class="data-popup-wrapper">
+                    <a href="javascript:void(0)" class="popup-close clearfix" data-close-data-popup="">
+                        <i class="las la-times"></i>
+                    </a>
+                    <div class="data-popup-form">
+						<div class="form-title">
+							<h3 class="text-uppercase">Contraseña</h3>
+						</div>
+						<div class="form-block">
+							<div class="row">
+								<div class="row-item col-md-12 col-lg-12">
+									<div class="form-field">
+										<label class="form-label" for="data-password-name">Contraseña</label>
+										<input class="form-input form-input-placeholder" type="password" id="data-password-name" name="data-password-name" value="" placeholder="xxxxxxxx">
+									</div>
+								</div>
+								<div class="row-item col-md-12 col-lg-12">
+									<div class="form-field">
+										<label class="form-label" for="data-password-name2">Repetir Contraseña</label>
+										<input class="form-input form-input-placeholder" type="password" id="data-password-name2" name="data-password-name2" value="" placeholder="xxxxxxxx">
+									</div>
+								</div>
+							</div>
+                        </div>
+						<div class="form-action">
+							<a href="#" class="button">
+								<span class="text">Guardar</span>
+							</a>
 						</div>
 					</div>
                 </div>
@@ -2234,6 +2417,7 @@
     <script src="assets/lib/slick-carouse/slick.js"></script>
     <script src="assets/lib/owl-carousel/owl.carousel.js"></script>
     <script src="assets/lib/fancybox/fancybox.umd.js"></script>
+    <script src="assets/lib/bootstrap-input-spinner/bootstrap-input-spinner.js"></script>
     <script src="assets/js/site.js"></script>
     <script src="assets/js/util.js"></script>
 </body>

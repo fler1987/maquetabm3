@@ -474,3 +474,83 @@ function cartPopup() {
 
     return false;
 }
+
+function profilePopup() {
+	event.preventDefault();
+	event.stopPropagation();
+	
+	$('body').removeClass('data-popup-show-profile');
+	$('body').addClass('data-popup-show-profile');
+
+    var profileClose = $('[data-close-data-popup]');
+    profileClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('data-popup-show-profile')) {
+            $('body').removeClass('data-popup-show-profile');
+        }
+    });
+
+    return false;
+}
+
+function addressPopup() {
+	event.preventDefault();
+	event.stopPropagation();
+	
+	$('body').removeClass('data-popup-show-address');
+	$('body').addClass('data-popup-show-address');
+
+    var profileClose = $('[data-close-data-popup]');
+    profileClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('data-popup-show-address')) {
+            $('body').removeClass('data-popup-show-address');
+        }
+    });
+
+    return false;
+}
+
+function passwordPopup() {
+	event.preventDefault();
+	event.stopPropagation();
+	
+	$('body').removeClass('data-popup-show-password');
+	$('body').addClass('data-popup-show-password');
+
+    var profileClose = $('[data-close-data-popup]');
+    profileClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('data-popup-show-password')) {
+            $('body').removeClass('data-popup-show-password');
+        }
+    });
+
+    return false;
+}
+
+function emailPopup() {
+	event.preventDefault();
+	event.stopPropagation();
+	
+	$('body').removeClass('data-popup-show-email');
+	$('body').addClass('data-popup-show-email');
+
+    var profileClose = $('[data-close-data-popup]');
+    profileClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('data-popup-show-email')) {
+            $('body').removeClass('data-popup-show-email');
+        }
+    });
+
+    return false;
+}
