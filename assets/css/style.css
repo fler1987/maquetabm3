@@ -2476,6 +2476,7 @@ body.open-mobile-sidebar .background-overlay {
 }
 
 .header .header-right .main-menu-icon {
+	position: relative;
     margin-top: 8px;
 }
 
@@ -2502,6 +2503,21 @@ body.open-mobile-sidebar .background-overlay {
 
 .header .header-right .main-menu-icon .menu-icon.active {
     background: #ddd !important;
+}
+
+.header .header-right .main-menu-icon .menu-icon.menu-icon-cart span {
+    position: absolute;
+    top: -6px;
+    right: -5px;
+    display: inline-block;
+    min-width: 22px;
+    min-height: 22px;
+    text-align: center;
+    line-height: 22px;
+    background: #e10303;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 12px;
 }
 
 @media (min-width: 1025px) {
