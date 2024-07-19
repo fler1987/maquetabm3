@@ -132,6 +132,9 @@ function searchPopup() {
     else {
         $('.menu-icon.menu-icon-search').addClass('active');
         $('body').addClass('search-popup-show');
+		setTimeout(() => {
+			$('#searchProduct').focus();
+		}, 100);
     }
 
     var searchClose = $('[data-close-search-popup], .background-overlay-search');
