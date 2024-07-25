@@ -430,7 +430,7 @@
                         sliderNav.slick({
                             adaptiveHeight: true,
                             fade: true,
-                            arrows: false,
+                            arrows: true,
                             dots: false,
                             infinite: false,
                             slidesToShow: 1,
