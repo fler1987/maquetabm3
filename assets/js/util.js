@@ -106,7 +106,16 @@
         }
     });
 
-    var menurepuesto = $('.bm3-menu-repuesto').bm3MenuRepuesto({
+    $(".repuesto-action").click(function () {
+		event.preventDefault();
+		dataRepuesto($(this).attr('data-repuesto'));
+    });
+});
+
+function dataRepuesto(data) {
+	alert(data);
+
+    var menuRepuesto = $('.bm3-menu-repuesto').bm3MenuRepuesto({
         onClosed: function () {
         },
         onOpened: function () {
@@ -114,18 +123,12 @@
     });
 
     $(".background-overlay-bm3-menu-repuesto, .bm3-menu-repuesto-close").click(function () {
-        menurepuesto.close();
+        menuRepuesto.close();
     });
-
-    $(".repuesto-action").click(function () {
-		event.preventDefault();
-        if ($("html").hasClass("bm3-menu-repuesto-opened")) {
-            menurepuesto.close();
-        } else {
-            menurepuesto.open();
-        }
-    });
-});
+	
+    menuRepuesto.open();
+	$('.bm3-menu-repuesto').find('.submenu').removeClass("opened");
+}
 
 function formLogin() {
     $('.form-login').removeClass('d-none');

@@ -1115,8 +1115,6 @@ html.bm3-menu-opened {
 }
 
 html.bm3-menu-opened body {
-    width: 100%;
-    position: fixed;
 }
 
 html.bm3-menu-opened .bm3-menu {
@@ -1283,12 +1281,10 @@ html:not(.no-transition) body,
 }
 
 html.bm3-menu-repuesto-opened {
-    overflow-x: hidden;
+   overflow: hidden;
 }
 
 html.bm3-menu-repuesto-opened body {
-    width: 100%;
-    position: fixed;
 }
 
 html.bm3-menu-repuesto-opened .bm3-menu-repuesto {
