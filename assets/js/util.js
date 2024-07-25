@@ -84,7 +84,7 @@
         });
     });
 
-    var menuMobile = $('.zeynep').zeynep({
+    var menuMobile = $('.bm3-menu').bm3Menu({
         onClosed: function () {
             $("body main").attr("style", "");
         },
@@ -93,15 +93,36 @@
         }
     });
 
-    $(".background-overlay-zeynep, .zeynep-close").click(function () {
+    $(".background-overlay-bm3-menu, .bm3-menu-close").click(function () {
         menuMobile.close();
     });
 
     $(".menu-icon-toogle").click(function () {
-        if ($("html").hasClass("zeynep-opened")) {
+		event.preventDefault();
+        if ($("html").hasClass("bm3-menu-opened")) {
             menuMobile.close();
         } else {
             menuMobile.open();
+        }
+    });
+
+    var menurepuesto = $('.bm3-menu-repuesto').bm3MenuRepuesto({
+        onClosed: function () {
+        },
+        onOpened: function () {
+        }
+    });
+
+    $(".background-overlay-bm3-menu-repuesto, .bm3-menu-repuesto-close").click(function () {
+        menurepuesto.close();
+    });
+
+    $(".repuesto-action").click(function () {
+		event.preventDefault();
+        if ($("html").hasClass("bm3-menu-repuesto-opened")) {
+            menurepuesto.close();
+        } else {
+            menurepuesto.open();
         }
     });
 });

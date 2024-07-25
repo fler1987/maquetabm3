@@ -1088,7 +1088,7 @@ button[disabled] {
     visibility: hidden;
 }
 
-.background-overlay-zeynep {
+.background-overlay-bm3-menu {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1099,21 +1099,32 @@ button[disabled] {
     background-color: rgba(0, 0, 0, .8);
 }
 
-html.zeynep-opened {
+.background-overlay-bm3-menu-repuesto {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1010;
+    display: none;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+html.bm3-menu-opened {
     overflow-x: hidden;
 }
 
-html.zeynep-opened body {
+html.bm3-menu-opened body {
     width: 100%;
     position: fixed;
 }
 
-html.zeynep-opened .zeynep {
+html.bm3-menu-opened .bm3-menu {
     pointer-events: auto;
     display: block;
 }
 
-.zeynep {
+.bm3-menu {
     position: fixed;
     left: 0;
     top: 0;
@@ -1129,15 +1140,15 @@ html.zeynep-opened .zeynep {
 }
 
 html:not(.no-transition) body,
-.zeynep:not(.no-transition),
-.zeynep .submenu:not(.no-transition) {}
+.bm3-menu:not(.no-transition),
+.bm3-menu .submenu:not(.no-transition) {}
 
-.zeynep-opened .background-overlay-zeynep {
+.bm3-menu-opened .background-overlay-bm3-menu {
     display: block;
     cursor: pointer;
 }
 
-.zeynep .zeynep-close {
+.bm3-menu .bm3-menu-close {
     display: block;
     position: absolute;
     top: 13px;
@@ -1150,36 +1161,36 @@ html:not(.no-transition) body,
     z-index: 1020;
 }
 
-.zeynep .zeynep-close i {
+.bm3-menu .bm3-menu-close i {
     background: #ffffff;
     color: #000000;
     font-size: 22px;
 }
 
-.zeynep ul {
+.bm3-menu ul {
     list-style-type: none;
     padding: 0;
     -webkit-overflow-scrolling: touch;
 }
 
-.zeynep ul>li {
+.bm3-menu ul>li {
     display: block;
 }
 
-.zeynep ul>li.has-submenu {
+.bm3-menu ul>li.has-submenu {
     background-image: url(../images/menu.svg);
     background-repeat: no-repeat;
     background-position: right 20px center;
     background-size: 10px;
 }
 
-.zeynep ul>li>a {
+.bm3-menu ul>li>a {
     display: block;
     text-decoration: none;
     padding: 20px;
 }
 
-.zeynep .submenu {
+.bm3-menu .submenu {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1192,15 +1203,15 @@ html:not(.no-transition) body,
     z-index: 1012;
 }
 
-.zeynep .submenu.opened {
+.bm3-menu .submenu.opened {
     left: 0;
 }
 
-.zeynep .submenu-header {
+.bm3-menu .submenu-header {
     position: relative;
 }
 
-.zeynep .submenu-header>a {
+.bm3-menu .submenu-header>a {
     display: block;
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 14px;
@@ -1212,7 +1223,7 @@ html:not(.no-transition) body,
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.zeynep .submenu-header>a:before {
+.bm3-menu .submenu-header>a:before {
     content: "";
     position: absolute;
     top: 20px;
@@ -1225,7 +1236,7 @@ html:not(.no-transition) body,
     background-position: center right;
 }
 
-.zeynep .title {
+.bm3-menu .title {
     display: block;
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 14px;
@@ -1236,24 +1247,24 @@ html:not(.no-transition) body,
     padding: 20px;
 }
 
-.zeynep .title-menu {
+.bm3-menu .title-menu {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.zeynep .has-submenu {
+.bm3-menu .has-submenu {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.zeynep .item-menu {
+.bm3-menu .item-menu {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.zeynep .button-menu {
+.bm3-menu .button-menu {
     padding: 20px;
     text-align: center;
 }
 
-.zeynep .button-menu .button {
+.bm3-menu .button-menu .button {
     margin: 0 20px 15px 20px;
     padding: 10px 30px;
     background-color: #ffffff;
@@ -1262,11 +1273,218 @@ html:not(.no-transition) body,
     font-weight: 500;
 }
 
-.zeynep .button-menu .button:last-child {
+.bm3-menu .button-menu .button:last-child {
     margin-bottom: 0;
 }
 
-.zeynep .button-menu .button:hover {
+.bm3-menu .button-menu .button:hover {
+    background-color: #222831;
+    color: #ffffff;
+}
+
+html.bm3-menu-repuesto-opened {
+    overflow-x: hidden;
+}
+
+html.bm3-menu-repuesto-opened body {
+    width: 100%;
+    position: fixed;
+}
+
+html.bm3-menu-repuesto-opened .bm3-menu-repuesto {
+    pointer-events: auto;
+    display: block;
+}
+
+.bm3-menu-repuesto {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #ffffff;
+    z-index: 1011;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: none;
+    display: none;
+}
+
+html:not(.no-transition) body,
+.bm3-menu-repuesto:not(.no-transition),
+.bm3-menu-repuesto .submenu:not(.no-transition) {}
+
+.bm3-menu-repuesto-opened .background-overlay-bm3-menu-repuesto {
+    display: block;
+    cursor: pointer;
+}
+
+.bm3-menu-repuesto .bm3-menu-repuesto-close {
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 0;
+    letter-spacing: 0;
+    text-align: center;
+    padding: 7px 14px 7px 7px;
+    color: #232323;
+    background: #ffffff;
+    z-index: 1020;
+}
+
+.bm3-menu-repuesto .bm3-menu-repuesto-close i {
+    background: #ffffff;
+    color: #000000;
+    font-size: 22px;
+}
+
+.bm3-menu-repuesto ul {
+    list-style-type: none;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bm3-menu-repuesto ul>li {
+    display: block;
+}
+
+.bm3-menu-repuesto ul>li.has-submenu {
+}
+
+.bm3-menu-repuesto ul>li.has-submenu>a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 35px 15px 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 7px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    background-image: url(../images/menu.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 10px;
+}
+
+.bm3-menu-repuesto ul>li.has-submenu>a img {
+    display: inline-block;
+	width: 35px;
+}
+
+.bm3-menu-repuesto ul>li.has-submenu>a:hover {
+	color: #000000;
+    background-color: #e5e5e5;
+    border: 1px solid #dbdbdb;
+}
+
+.bm3-menu-repuesto ul>li.item-menu>a {
+    display: block;
+    text-decoration: none;
+    padding: 8px 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #dbdbdb;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+.bm3-menu-repuesto ul>li.item-menu>a img {
+    display: inline-block;
+	width: 35px;
+	margin-right: 10px;
+}
+
+.bm3-menu-repuesto ul>li.item-menu>a:hover {
+	color: #000000;
+    background: #e5e5e5;
+    border: 1px solid #dbdbdb;
+}
+
+.bm3-menu-repuesto .submenu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    min-height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1012;
+}
+
+.bm3-menu-repuesto .submenu.opened {
+    left: 0;
+}
+
+.bm3-menu-repuesto .submenu-header {
+    position: relative;
+}
+
+.bm3-menu-repuesto .submenu-header>a {
+    display: block;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.bm3-menu-repuesto .submenu-header>a:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 20px;
+    width: 20px;
+    transform: rotate(-180deg);
+    background-image: url(../images/menu.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.bm3-menu-repuesto .title {
+    display: block;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 20px;
+}
+
+.bm3-menu-repuesto .title-menu {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.bm3-menu-repuesto .has-submenu {
+}
+
+.bm3-menu-repuesto .item-menu {
+}
+
+.bm3-menu-repuesto .button-menu {
+    padding: 20px;
+    text-align: center;
+}
+
+.bm3-menu-repuesto .button-menu .button {
+    margin: 0 20px 15px 20px;
+    padding: 10px 30px;
+    background-color: #ffffff;
+    border: 2px solid #222831;
+    color: #222831;
+    font-weight: 500;
+}
+
+.bm3-menu-repuesto .button-menu .button:last-child {
+    margin-bottom: 0;
+}
+
+.bm3-menu-repuesto .button-menu .button:hover {
     background-color: #222831;
     color: #ffffff;
 }
