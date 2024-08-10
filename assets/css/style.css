@@ -4860,16 +4860,28 @@ body.open-mobile-sidebar .background-overlay {
 }
 
 .block-banner-full .slide-items .slide-item .slide-info {
+}
+
+.block-banner-full .slide-items .slide-item .slide-info .slide-info-text {
     position: absolute;
-    bottom: 75px;
+	top: 75px;
+    bottom: 100px;
     left: 0;
     right: 0;
+	z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.block-banner-full .slide-items .slide-item .slide-info .slide-info-title {
+.block-banner-full .slide-items .slide-item .slide-info .slide-info-text .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	height: 100%;
+}
+
+.block-banner-full .slide-items .slide-item .slide-info .slide-info-text .slide-info-title {
     font-family: "Bai Jamjuree", sans-serif;
     font-size: 42px;
     line-height: 50px;
@@ -4880,11 +4892,11 @@ body.open-mobile-sidebar .background-overlay {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .75);
 }
 
-.block-banner-full .slide-items .slide-item .slide-info .slide-info-title a {
+.block-banner-full .slide-items .slide-item .slide-info .slide-info-text .slide-info-title a {
     color: #ffffff;
 }
 
-.block-banner-full .slide-items .slide-item .slide-info .slide-info-subtitle {
+.block-banner-full .slide-items .slide-item .slide-info .slide-info-text .slide-info-subtitle {
     font-size: 20px;
     line-height: 25px;
     color: #E10303;
@@ -4893,14 +4905,24 @@ body.open-mobile-sidebar .background-overlay {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .75);
 }
 
-.block-banner-full .slide-items .slide-item .slide-info .slide-info-button {
+.block-banner-full .slide-items .slide-item .slide-info .slide-info-action {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+	z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-banner-full .slide-items .slide-item .slide-info .slide-info-action .slide-info-button {
     display: inline-block;
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
     padding: 20px 40px;
     width: max-content;
-    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
