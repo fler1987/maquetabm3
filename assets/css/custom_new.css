@@ -1,0 +1,82 @@
+﻿.block-product .image-box
+{
+    display: block;
+    max-width: 90px;
+    max-height: 75px;
+    min-height: 75px;
+    margin: 0 auto;
+}
+
+    .block-product .image-box.icon-galon
+    {
+        max-width: 55px;
+    }
+
+    .block-product .image-box.icon-cilindrada
+    {
+        max-width: 80px;
+    }
+
+    .block-product .image-box.icon-velocidad
+    {
+        max-width: 62px;
+    }
+
+    .block-product .image-box.icon-potencia
+    {
+        max-width: 55px;
+    }
+
+    .block-product .image-box.icon-torque
+    {
+        max-width: 55px;
+    }
+
+.block-brand .wrapper-item {
+    margin: 5px 0 !important;
+}
+
+
+.block-section .block-header {   
+    margin-bottom: 30px !important;
+}
+
+.block-standout .slick-arrow { 
+    top: 30% !important; 
+}
+
+.button.button-whatsapp-servicio-tecnico {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #222831;
+    padding: 15px;
+}
+
+.button.button-whatsapp-servicio-tecnico i {
+    border-color: #25d366;
+    color: #25d366;
+}
+
+.breadcrumb > a.bread-text {
+    font-size: 11px !important;
+}
+
+.breadcrumb > span.bread-text {    
+    font-size: 11px;
+}
+
+.block-section .product-item-media img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+p.product-item-name.altura {
+    /*height: 50px;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.footer .footer-menu .footer-icon-text .item-text a {
+    color: #dddddd;
+}
