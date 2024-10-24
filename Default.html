@@ -564,7 +564,7 @@
                             <a href="javascript:void(0)" class="menu-icon menu-icon-account" onclick="accountPopup();">
                                 <img src="assets/images/icon-usuario.svg" />
                             </a>
-                            <a href="#" class="menu-icon menu-icon-cart">
+                            <a href="javascript:void(0)" class="menu-icon menu-icon-cart" onclick="cartPopup();">
 								<span>5</span>
                                 <img src="assets/images/icon-carrito.svg" />
                             </a>
@@ -2326,7 +2326,100 @@
                 </div>
             </div>
         </div>
+    
+<div class="cart-popup">
+    <div class="container container-1170 cart-popup-container">
+        <div class="cart-popup-wrapper">
+            <div class="cart-popup-top">
+                <div class="cart-content">
+                    <div class="cart-title">
+                        <h3><i class="fa-solid fa-circle-check active"></i><span>Agregado al carrito</span></h3>
+                        <a href="javascript:void(0)" class="popup-close clearfix" data-close-cart-popup="">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-popup-flex">
+                <div class="cart-content">
+                    <div class="cart-items" id="cart-items-container">
+						<div class="row cart-item">
+							<div class="row-item col-md-12 col-125">
+								<div class="cart-item-image">
+									<img src="http://qa.bm3motos.com/ArchivosBm3Qa//imagenes/productos//173/173_3_XTZ100.png" alt="Product Image">
+								</div>
+							</div>
+							<div class="row-item col-md-12 col-auto">
+								<div class="cart-item-detail">
+									<h5>Aima</h5>
+									<h4>XTZ 125 2024</h4>
+									<h6>COLOR: NEGRO</h6>
+								</div>
+								<div class="cart-item-price res-show">
+									<span class="price">S/.1.00</span>
+									<span class="price-offer">S/.1.00</span>
+								</div>
+							</div>
+							<div class="row-item col-md-12 col-100 res-hide">
+								<div class="cart-item-price">
+									<span class="price">S/.1.00</span>
+									<span class="price-offer">S/.1.00</span>
+								</div>
+							</div>
+							<div class="row-item col-md-12 col-50">
+								<div class="cart-item-link">
+									<a href="javascript:void(0);" onclick="removeItemFromCart(0, true)" style="color: red; font-size: 20px;"><i class="fa-solid fa-trash-can"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="row cart-item">
+							<div class="row-item col-md-12 col-125">
+								<div class="cart-item-image">
+									<img src="http://qa.bm3motos.com/ArchivosBm3Qa//imagenes/productos//173/173_3_XTZ100.png" alt="Product Image">
+								</div>
+							</div>
+							<div class="row-item col-md-12 col-auto">
+								<div class="cart-item-detail">
+									<h5>Aima</h5>
+									<h4>XTZ 125 2024</h4>
+									<h6>COLOR: NEGRO</h6>
+								</div>
+								<div class="cart-item-price res-show">
+									<span class="price">S/.1.00</span>
+									<span class="price-offer">S/.1.00</span>
+								</div>
+							</div>
+							<div class="row-item col-md-12 col-100 res-hide">
+								<div class="cart-item-price">
+									<span class="price">S/.1.00</span>
+									<span class="price-offer">S/.1.00</span>
+								</div>
+							</div>
+							<div class="row-item col-md-12 col-50">
+								<div class="cart-item-link">
+									<a href="javascript:void(0);" onclick="removeItemFromCart(0, true)" style="color: red; font-size: 20px;"><i class="fa-solid fa-trash-can"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+            <div class="cart-popup-bottom">
+                <div class="cart-content">
+                    <div class="cart-total">
+                        <div class="cart-item" id="cart-total-container">Subtotal (1 productos): S/.1.00</div>
+                    </div>
+                    <div class="cart-button">
+                        <a href="/Cart/CartItemDetalle" class="button">
+                            <span class="text">Finalizar compra</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+	</div>
 
     <script src="assets/lib/jquery/jquery.min.js"></script>
     <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>

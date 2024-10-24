@@ -489,8 +489,8 @@ function cartPopup() {
 	$('body').removeClass('cart-popup-show');
 	$('body').addClass('cart-popup-show');
 
-    var accountClose = $('[data-close-cart-popup]');
-    accountClose.on('click', function (e) {
+    var cartClose = $('[data-close-cart-popup], .background-overlay-popup');
+    cartClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -509,7 +509,7 @@ function profilePopup() {
 	$('body').removeClass('data-popup-show-profile');
 	$('body').addClass('data-popup-show-profile');
 
-    var profileClose = $('[data-close-data-popup]');
+    var profileClose = $('[data-close-data-popup], .background-overlay-popup');
     profileClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
