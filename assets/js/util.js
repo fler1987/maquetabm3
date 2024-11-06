@@ -1,6 +1,11 @@
 ﻿$(function () {
     'use strict';
-
+	
+    $('.repuesto-filter-toggle').click(function() {
+        $('.block-repuesto .block-form').toggleClass('active');
+        $('.icon-toggle').toggleClass('fa-chevron-right fa-chevron-up');
+    });
+	
     $('.password-toogle').click(function () {
         if ($(this).hasClass('show')) {
             $(this).prev().attr('type', 'text');
