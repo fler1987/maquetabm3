@@ -115,7 +115,43 @@
 		event.preventDefault();
 		dataRepuesto($(this).attr('data-repuesto'));
     });
+	
+    var $tabButtons = $('.nav-link');
+    var $accordionButtons = $('.accordion-button');
+
+    $tabButtons.each(function(index) {
+        $(this).on('click', function() {
+            const target = $accordionButtons.eq(index).data('bs-target');
+            $(target).collapse('show');
+        });
+    });
+
+    $accordionButtons.each(function(index) {
+        $(this).on('click', function() {
+            $tabButtons.eq(index).tab('show');
+        });
+    });
 });
+
+function toggleTab(id) {
+    // Seleccionar el contenido y el icono correspondiente
+    const content = $(`#${id} .tab-container`);
+    const icon = $(`#icon-${id}`);
+
+    // Si la sección está visible, la cerramos; de lo contrario, cerramos todas y abrimos la seleccionada
+    if (content.hasClass('d-block')) {
+        content.removeClass('d-block active-content').addClass('d-none');
+        icon.removeClass('fa-chevron-down').addClass('fa-chevron-right');
+    } else {
+        // Cerrar todas las secciones y restablecer los iconos
+        $('.tab-container').removeClass('d-block active-content').addClass('d-none');
+        $('.tab-toggle i').removeClass('fa-chevron-down').addClass('fa-chevron-right');
+
+        // Abrir solo la sección seleccionada y cambiar el icono
+        content.removeClass('d-none').addClass('d-block active-content');
+        icon.removeClass('fa-chevron-right').addClass('fa-chevron-down');
+    }
+}
 
 function dataRepuesto(data) {
 	alert(data);
