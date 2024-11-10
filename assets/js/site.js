@@ -51,7 +51,7 @@
         },
         initToggleSidebar: function () {
             var sidebarOpen = $('[data-sidebar]'),
-                sidebarClose = $('.sidebar-close');
+                sidebarClose = $('.sidebar-close, .background-overlay');
 
             sidebarOpen.click(function (e) {
                 e.preventDefault();

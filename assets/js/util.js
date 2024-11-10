@@ -231,7 +231,7 @@ function accountPopup() {
         $('body').addClass('account-popup-show');
     }
 
-    var accountClose = $('[data-close-account-popup]');
+    var accountClose = $('[data-close-account-popup], .background-overlay-popup');
     accountClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -249,8 +249,8 @@ function financePopup(idMarca,idProduct,nomMarca) {
 
  
     //remover otros popup
-    $('body').removeClass('finance-popup-show');
-    $('body').addClass('finance-popup-show');
+    $('body').removeClass('data-popup-show');
+    $('body').addClass('data-popup-show');
 
     listarMarcas(idMarca, nomMarca);
     listarProductosPorMarca(idMarca, idProduct);
@@ -261,8 +261,8 @@ function financePopup(idMarca,idProduct,nomMarca) {
         e.preventDefault();
         e.stopPropagation();
 
-        if ($('body').hasClass('finance-popup-show')) {
-            $('body').removeClass('finance-popup-show');
+        if ($('body').hasClass('data-popup-show')) {
+            $('body').removeClass('data-popup-show');
     
         }
     });
@@ -271,8 +271,8 @@ function financePopup(idMarca,idProduct,nomMarca) {
 }
 
 function cerrarPopup() {
-    if ($('body').hasClass('finance-popup-show')) {
-        $('body').removeClass('finance-popup-show');
+    if ($('body').hasClass('data-popup-show')) {
+        $('body').removeClass('data-popup-show');
     }
 
     $('#txtNombre').val('');
@@ -494,39 +494,10 @@ $('.search-result-llanta').click(function (e) {
     window.location.href = url;
 });
 
-function llantaPopup() {
-    //remover otros popup
+function cartPopup() {
     $('body').removeClass('search-popup-show');
     $('.menu-icon.menu-icon-search').removeClass('active');
-
-    if ($('.menu-icon.menu-icon-llanta').hasClass('active')) {
-        $('.menu-icon.menu-icon-llanta').removeClass('active');
-        $('body').removeClass('llanta-popup-show');
-    }
-    else {
-        $('.menu-icon.menu-icon-llanta').addClass('active');
-        $('body').addClass('llanta-popup-show');
-    }
-
-    var llantaClose = $('[data-close-llanta-popup]');
-    llantaClose.on('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        if ($('body').hasClass('llanta-popup-show')) {
-            $('body').removeClass('llanta-popup-show');
-            $('.menu-icon.menu-icon-llanta').removeClass('active');
-        }
-    });
-
-    return false;
-}
-
-function cartPopup() {
-	event.preventDefault();
-	event.stopPropagation();
-		
-    //remover otros popup
+    
 	$('body').removeClass('cart-popup-show');
 	$('body').addClass('cart-popup-show');
 
@@ -543,20 +514,35 @@ function cartPopup() {
     return false;
 }
 
+function llantaPopup() {
+	$('body').removeClass('llanta-popup-show');
+	$('body').addClass('llanta-popup-show');
+
+    var llantaClose = $('[data-close-llanta-popup], .background-overlay-popup');
+    llantaClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('llanta-popup-show')) {
+            $('body').removeClass('llanta-popup-show');
+            $('.menu-icon.menu-icon-llanta').removeClass('active');
+        }
+    });
+
+    return false;
+}
+
 function profilePopup() {
-	event.preventDefault();
-	event.stopPropagation();
-	
-	$('body').removeClass('data-popup-show-profile');
-	$('body').addClass('data-popup-show-profile');
+	$('body').removeClass('profile-popup-show');
+	$('body').addClass('profile-popup-show');
 
     var profileClose = $('[data-close-data-popup], .background-overlay-popup');
     profileClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
 
-        if ($('body').hasClass('data-popup-show-profile')) {
-            $('body').removeClass('data-popup-show-profile');
+        if ($('body').hasClass('profile-popup-show')) {
+            $('body').removeClass('profile-popup-show');
         }
     });
 
@@ -564,19 +550,16 @@ function profilePopup() {
 }
 
 function addressPopup() {
-	event.preventDefault();
-	event.stopPropagation();
-	
-	$('body').removeClass('data-popup-show-address');
-	$('body').addClass('data-popup-show-address');
+	$('body').removeClass('address-popup-show');
+	$('body').addClass('address-popup-show');
 
-    var profileClose = $('[data-close-data-popup]');
+    var profileClose = $('[data-close-data-popup], .background-overlay-popup');
     profileClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
 
-        if ($('body').hasClass('data-popup-show-address')) {
-            $('body').removeClass('data-popup-show-address');
+        if ($('body').hasClass('address-popup-show')) {
+            $('body').removeClass('address-popup-show');
         }
     });
 
@@ -584,19 +567,16 @@ function addressPopup() {
 }
 
 function passwordPopup() {
-	event.preventDefault();
-	event.stopPropagation();
-	
-	$('body').removeClass('data-popup-show-password');
-	$('body').addClass('data-popup-show-password');
+	$('body').removeClass('password-popup-show');
+	$('body').addClass('password-popup-show');
 
-    var profileClose = $('[data-close-data-popup]');
+    var profileClose = $('[data-close-data-popup], .background-overlay-popup');
     profileClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
 
-        if ($('body').hasClass('data-popup-show-password')) {
-            $('body').removeClass('data-popup-show-password');
+        if ($('body').hasClass('password-popup-show')) {
+            $('body').removeClass('password-popup-show');
         }
     });
 
@@ -604,19 +584,16 @@ function passwordPopup() {
 }
 
 function emailPopup() {
-	event.preventDefault();
-	event.stopPropagation();
-	
-	$('body').removeClass('data-popup-show-email');
-	$('body').addClass('data-popup-show-email');
+	$('body').removeClass('email-popup-show');
+	$('body').addClass('email-popup-show');
 
-    var profileClose = $('[data-close-data-popup]');
+    var profileClose = $('[data-close-data-popup], .background-overlay-popup');
     profileClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
 
-        if ($('body').hasClass('data-popup-show-email')) {
-            $('body').removeClass('data-popup-show-email');
+        if ($('body').hasClass('email-popup-show')) {
+            $('body').removeClass('email-popup-show');
         }
     });
 
