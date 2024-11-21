@@ -2830,7 +2830,6 @@ progress
     background-color: #fff;
     border-color: #86b7fe;
     outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
 }
 
 .form-control::-webkit-date-and-time-value
@@ -9841,6 +9840,36 @@ textarea.form-control-lg
     font-weight: bolder!important;
 }
 
+.fw-300
+{
+    font-weight: 300!important;
+}
+
+.fw-400
+{
+    font-weight: 400!important;
+}
+
+.fw-500
+{
+    font-weight: 500!important;
+}
+
+.fw-600
+{
+    font-weight: 600!important;
+}
+
+.fw-700
+{
+    font-weight: 700!important;
+}
+
+.fw-800
+{
+    font-weight: 800!important;
+}
+
 .lh-1
 {
     line-height: 1!important;
@@ -9991,7 +10020,7 @@ textarea.form-control-lg
 .text-muted
 {
     --bs-text-opacity:1;
-    color: #6c757d!important;
+    color: #ababab!important;
 }
 
 .text-black-50

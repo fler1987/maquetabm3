@@ -1,6 +1,11 @@
 ﻿$(function () {
     'use strict';
-
+	
+    $('.repuesto-filter-toggle').click(function() {
+        $('.block-repuesto .block-form').toggleClass('active');
+        $('.icon-toggle').toggleClass('fa-chevron-right fa-chevron-up');
+    });
+	
     $('.password-toogle').click(function () {
         if ($(this).hasClass('show')) {
             $(this).prev().attr('type', 'text');
@@ -19,48 +24,72 @@
         $('#searchProduct').focus();
         $('.search-popup-result').removeClass('d-none').addClass('d-none');
         $('.search-popup-popular').removeClass('d-none');
+        $('#searchClear').hide();
     });
 
-    $('#searchProduct').keyup(function () {
-        $('.search-popup-result').removeClass('d-none').addClass('d-none');
-        $('.search-popup-popular').removeClass('d-none');
+    $('#searchClearLlanta').click(function () {
+        $('#searchProductLlanta').val('');
+        $('#searchProductLlanta').focus();
+        $('.search-llanta-result').removeClass('d-none').addClass('d-none');
+        $('.search-llanta-popular').removeClass('d-none');
+        $('#searchClearLlanta').hide();
+    });
+	
+    $('.select-bm3').each(function () {
+        var $this = $(this),
+            numberOfOptions = $(this).children('option').length;
 
-        var searchField = $(this).val();
-        if (searchField.length > 0) {
-            $.getJSON('https://jsonplaceholder.typicode.com/photos?_limit=5&q=' + searchField, function (data) {
-                //$.getJSON('assets/data/data.json', function (data) {
-                console.log(data.length);
-                console.log(data);
-                if (data.length > 0) {
-                    var output = '';
-                    $.each(data, function (index, obj) {
-                        output += '<a href="javascript:void(0);">';
-                        output += '    <div class="d-flex align-items-center">';
-                        output += '        <img src="' + obj.thumbnailUrl + '" />';
-                        output += '        <div class="flex-1 ms-3">';
-                        output += '            <h6 class="m-0">' + obj.title + '</h6>';
-                        output += '        </div>';
-                        output += '    </div>';
-                        output += '</a>';
-                    });
-                    $('.search-result-list').html(output);
+        $this.addClass('custom-select-hidden');
+        $this.wrap('<div class="custom-select"></div>');
+        $this.after('<div class="custom-select-selection"></div>');
 
-                    $('.search-popup-result').removeClass('d-none');
-                    $('.search-popup-popular').addClass('d-none');
-                }
-                else {
-                    $('.search-popup-result').addClass('d-none');
-                    $('.search-popup-popular').removeClass('d-none');
-                }
+        var $customSelection = $this.next('div.custom-select-selection');
+        $customSelection.text($this.children('option').eq(0).text());
+
+        var $list = $('<ul />', {
+            'class': 'custom-select-option'
+        }).insertAfter($customSelection);
+
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                value: $this.children('option').eq(i).val(),
+                class: $this.children('option').eq(i).attr("class")
+            }).appendTo($list);
+        }
+
+        var $listItems = $list.children('li');
+
+        $customSelection.click(function (e) {
+            e.stopPropagation();
+            $('div.custom-select-selection.active').each(function () {
+                $(this).removeClass('active').next('ul.custom-select-option').hide();
             });
-        }
-        else {
-            $('.search-popup-result').addClass('d-none');
-            $('.search-popup-popular').removeClass('d-none');
-        }
+            $(this).toggleClass('active').next('ul.custom-select-option').toggle();
+        });
+
+        $listItems.click(function (e) {
+            e.stopPropagation();
+            $customSelection.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('value'));
+            $list.hide();
+
+            var $selection = $this.val();
+            if ($selection.indexOf("http://") == 0 || $selection.indexOf("https://") == 0) {
+                window.location = $selection;
+            }
+            else {
+                actionSelect($this.attr('id'), $selection);
+            }
+        });
+
+        $(document).click(function () {
+            $customSelection.removeClass('active');
+            $list.hide();
+        });
     });
 
-    var menuMobile = $('.zeynep').zeynep({
+    var menuMobile = $('.bm3-menu').bm3Menu({
         onClosed: function () {
             $("body main").attr("style", "");
         },
@@ -69,18 +98,78 @@
         }
     });
 
-    $(".background-overlay-zeynep").click(function () {
+    $(".background-overlay-bm3-menu, .bm3-menu-close").click(function () {
         menuMobile.close();
     });
 
     $(".menu-icon-toogle").click(function () {
-        if ($("html").hasClass("zeynep-opened")) {
+		event.preventDefault();
+        if ($("html").hasClass("bm3-menu-opened")) {
             menuMobile.close();
         } else {
             menuMobile.open();
         }
     });
+
+    $(".repuesto-action").click(function () {
+		event.preventDefault();
+		dataRepuesto($(this).attr('data-repuesto'));
+    });
+	
+    var $tabButtons = $('.nav-link');
+    var $accordionButtons = $('.accordion-button');
+
+    $tabButtons.each(function(index) {
+        $(this).on('click', function() {
+            const target = $accordionButtons.eq(index).data('bs-target');
+            $(target).collapse('show');
+        });
+    });
+
+    $accordionButtons.each(function(index) {
+        $(this).on('click', function() {
+            $tabButtons.eq(index).tab('show');
+        });
+    });
 });
+
+function toggleTab(id) {
+    // Seleccionar el contenido y el icono correspondiente
+    const content = $(`#${id} .tab-container`);
+    const icon = $(`#icon-${id}`);
+
+    // Si la sección está visible, la cerramos; de lo contrario, cerramos todas y abrimos la seleccionada
+    if (content.hasClass('d-block')) {
+        content.removeClass('d-block active-content').addClass('d-none');
+        icon.removeClass('fa-chevron-down').addClass('fa-chevron-right');
+    } else {
+        // Cerrar todas las secciones y restablecer los iconos
+        $('.tab-container').removeClass('d-block active-content').addClass('d-none');
+        $('.tab-toggle i').removeClass('fa-chevron-down').addClass('fa-chevron-right');
+
+        // Abrir solo la sección seleccionada y cambiar el icono
+        content.removeClass('d-none').addClass('d-block active-content');
+        icon.removeClass('fa-chevron-right').addClass('fa-chevron-down');
+    }
+}
+
+function dataRepuesto(data) {
+	alert(data);
+
+    var menuRepuesto = $('.bm3-menu-repuesto').bm3MenuRepuesto({
+        onClosed: function () {
+        },
+        onOpened: function () {
+        }
+    });
+
+    $(".background-overlay-bm3-menu-repuesto, .bm3-menu-repuesto-close").click(function () {
+        menuRepuesto.close();
+    });
+	
+    menuRepuesto.open();
+	$('.bm3-menu-repuesto').find('.submenu').removeClass("opened");
+}
 
 function formLogin() {
     $('.form-login').removeClass('d-none');
@@ -108,9 +197,13 @@ function searchPopup() {
     else {
         $('.menu-icon.menu-icon-search').addClass('active');
         $('body').addClass('search-popup-show');
+		setTimeout(() => {
+			$('#searchProduct').focus();
+		}, 100);
     }
 
-    var searchClose = $('.background-overlay-search, [data-close-search-popup]');
+    var searchClose = $('[data-close-search-popup], .background-overlay-search');
+
     searchClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -138,7 +231,7 @@ function accountPopup() {
         $('body').addClass('account-popup-show');
     }
 
-    var accountClose = $('.background-overlay-popup, [data-close-account-popup]');
+    var accountClose = $('[data-close-account-popup], .background-overlay-popup');
     accountClose.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -152,18 +245,355 @@ function accountPopup() {
     return false;
 }
 
-function financePopup() {
-    //remover otros popup
-    $('body').removeClass('search-popup-show');
-    $('body').addClass('finance-popup-show');
+function financePopup(idMarca,idProduct,nomMarca) {
 
-    var financeClose = $('.background-overlay-popup, [data-close-finance-popup]');
+ 
+    //remover otros popup
+    $('body').removeClass('data-popup-show');
+    $('body').addClass('data-popup-show');
+
+    listarMarcas(idMarca, nomMarca);
+    listarProductosPorMarca(idMarca, idProduct);
+
+    var financeClose = $('[data-close-finance-popup]');
     financeClose.on('click', function (e) {
+       
         e.preventDefault();
         e.stopPropagation();
 
-        if ($('body').hasClass('finance-popup-show')) {
-            $('body').removeClass('finance-popup-show');
+        if ($('body').hasClass('data-popup-show')) {
+            $('body').removeClass('data-popup-show');
+    
+        }
+    });
+
+    return false;
+}
+
+function cerrarPopup() {
+    if ($('body').hasClass('data-popup-show')) {
+        $('body').removeClass('data-popup-show');
+    }
+
+    $('#txtNombre').val('');
+    $('#txtCelular').val('');
+    $('#txtFechaNacimiento').val('');
+    $('#txtCorreo').val('');
+    $('#cboTipoDocumento').val('0');
+    $('#txtNroDocumento').val('');
+
+    // Limpiar campos laborales
+    $('input[name="data-laboral"]').prop('checked', false);
+    $('input[name="data-laboral"]:first').prop('checked', true);
+    $('#data-cuotaminima').val('');
+    $('#txtIngresoNeto').val('');
+    $("#data-dependiente, #data-independiente").prop("checked", false);
+
+    // Limpiar campos de la moto
+    $('#cboMarca').val('0');
+    $('#cboModelo').val('0');
+    $('#PoliticaPrivacidad').prop('checked', false);
+    $('#AceptoComunicaciones').prop('checked', false);
+
+    $("<style>")
+        .prop("type", "text/css")
+        .html(".block-finance  .block-form:nth-child(2):before { background: #949494; }")
+        .appendTo("head");
+
+    //s realizar acciones adicionales si es necesario
+
+    $(".block-form:eq(1)").css("opacity", "0.5");
+
+    $("<style>")
+        .prop("type", "text/css")
+        .html(".block-finance .block-form:nth-child(3):before { background: #949494; }")
+        .appendTo("head");
+
+    $(".block-form-end").css("opacity", "0.5");
+}
+
+
+function productColorSelection(valor, texto, precio, descuento, tipoMoneda, tipoCambio) {
+    var select = $('.product-view-for').find("[data-product-nav='" + valor + "']");
+    var slide = select.parent("div").parent("div");
+    var slideno = slide.attr('data-slick-index');
+
+    let USDollar = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+
+    let PENSoles = new Intl.NumberFormat('es-PE', {
+        style: 'currency',
+        currency: 'PEN',
+    });
+
+    if (slideno !== undefined) {
+        $('.product-view-for').slick('slickGoTo', slideno);
+    }
+
+    $('[data-color-option]').html(texto);
+
+    let iconoMoneda = "S/";
+
+    //Change Precio
+    if (tipoMoneda == 2) {
+
+        iconoMoneda = "$";
+        let precioChange = 0;
+
+        if (descuento > 0) {
+            $('#priceOffer').show();
+            $('#priceOld').show();
+            //$('#priceOld').text(iconoMoneda + precio.toFixed(2));
+            //$('#priceOffer').text(iconoMoneda + descuento.toFixed(2));
+           
+            $('#priceOld').text(USDollar.format(precio));
+            $('#priceOffer').text(USDollar.format(descuento));
+            precioChange = descuento * tipoCambio;
+
+        } else {
+
+            $('#priceOffer').show();
+            $('#priceOld').hide();
+
+            if (precio != undefined) {
+
+                precioChange = precio * tipoCambio;
+
+                $('#priceOffer').show();
+                //$('#priceOffer').text(iconoMoneda + precio.toFixed(2));
+                $('#priceOffer').text(USDollar.format(precio));
+            } else {
+                $('#priceOffer').hide();
+            }
+        }
+        $("#priceChange").text(PENSoles.format(precioChange));
+    } else {
+
+        if (descuento > 0) {
+            $('#priceOld').show();
+            $('#priceOffer').show();
+            //$('#priceOld').text(iconoMoneda + precio.toFixed(2));
+            //$('#priceOffer').text(iconoMoneda + descuento.toFixed(2));
+            $('#priceOld').text(PENSoles.format(precio));
+            $('#priceOffer').text(PENSoles.format(descuento));
+        } else {
+
+            $('#priceOld').hide();
+            if (precio != undefined) {
+                $('#priceOffer').show();
+                $('#priceOffer').text(PENSoles.format(precio));
+            } else {
+                $('#priceOffer').hide();
+            }
+        }
+        $("#priceChange").hide();
+    }   
+}
+
+function productItemSelection(valor, texto) {
+    console.log(texto + ' - ' + texto);
+    $('[data-item-option]').html(texto);
+}
+
+$('#searchProduct').keyup(function () {
+    var textCount = $(this).val().length;
+    if (textCount == 0) {
+        $('#searchClear').hide();
+    } else {
+        $('#searchClear').show();
+    }
+    $('.search-popup-result').removeClass('d-none').addClass('d-none');
+    $('.search-popup-popular').removeClass('d-none');
+
+    var searchField = $(this).val();
+    if (searchField.length >= 3) {
+
+        var url = '/Home/SearchAuto?q=' + searchField;
+
+        $.getJSON(url, function (data) {
+            if (data.length > 0) {
+                $('#searchResults').empty(); // Limpia los resultados anteriores
+                var output = '';
+                for (var i = 0; i < data.length; i++) {
+
+                    var pictureURLs = data[i].PictureURLs;
+                    var name = data[i].Name;
+
+                    // Verificar si 'PictureURLs' no es nulo y no está vacío
+                    if (pictureURLs && pictureURLs.length > 0) {
+                        // Recorre el arreglo 'PictureURLs'
+                        for (var j = 0; j < pictureURLs.length; j++) {
+                            var pictureURL = pictureURLs[j];
+
+                            /*output += '<a href="javascript:void(0);">';*/
+                            output += '<a href="/busqueda?q=' + name + '" class="search-result-item" data-name="' + name + '">';
+                            output += '    <div class="d-flex align-items-center">';
+                            output += '        <img src="content/images/' + pictureURL + '" />';
+                            output += '        <div class="flex-1 ms-3">';
+                            output += '            <h6 class="m-0">' + name + '</h6>';
+                            output += '        </div>';
+                            output += '    </div>';
+                            output += '</a>';
+                        }
+                    }
+                }
+
+                $('.search-result-list').html(output);
+
+                $('.search-popup-result').removeClass('d-none');
+                $('.search-popup-popular').addClass('d-none');
+            }
+            else {
+                $('.search-popup-result').addClass('d-none');
+                $('.search-popup-popular').removeClass('d-none');
+            }
+        });
+
+    }
+    else {
+        $('.search-popup-result').addClass('d-none');
+        $('.search-popup-popular').removeClass('d-none');
+    }
+});
+
+$('.search-result-item').click(function (e) {
+    e.preventDefault();
+    var selectedName = $(this).data('name');
+    $("#searchProduct").val(selectedName);
+    var url = '/Catalogo/Busqueda?q=' + selectedName;
+    window.location.href = url;
+});
+
+$('#searchProductLlanta').keyup(function () {
+    var textCount = $(this).val().length;
+    if (textCount == 0) {
+        $('#searchClearLlanta').hide();
+    } else {
+        $('#searchClearLlanta').show();
+    }
+    
+	//$('.search-llanta-result').removeClass('d-none').addClass('d-none');
+    //$('.search-llanta-popular').removeClass('d-none');
+	
+	$('.search-llanta-result').removeClass('d-none');
+	$('.search-llanta-popular').addClass('d-none');
+	
+	console.log('searchProductLlanta');
+	
+	//$('.search-popup-result').removeClass('d-none');
+	//$('.search-popup-popular').addClass('d-none');
+});
+
+$('.search-result-llanta').click(function (e) {
+    e.preventDefault();
+    var selectedName = $(this).data('name');
+    $("#searchProductLlanta").val(selectedName);
+    var url = '/Catalogo/Llanta?q=' + selectedName;
+    window.location.href = url;
+});
+
+function cartPopup() {
+    $('body').removeClass('search-popup-show');
+    $('.menu-icon.menu-icon-search').removeClass('active');
+    
+	$('body').removeClass('cart-popup-show');
+	$('body').addClass('cart-popup-show');
+
+    var cartClose = $('[data-close-cart-popup], .background-overlay-popup');
+    cartClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('cart-popup-show')) {
+            $('body').removeClass('cart-popup-show');
+        }
+    });
+
+    return false;
+}
+
+function llantaPopup() {
+	$('body').removeClass('llanta-popup-show');
+	$('body').addClass('llanta-popup-show');
+
+    var llantaClose = $('[data-close-llanta-popup], .background-overlay-popup');
+    llantaClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('llanta-popup-show')) {
+            $('body').removeClass('llanta-popup-show');
+            $('.menu-icon.menu-icon-llanta').removeClass('active');
+        }
+    });
+
+    return false;
+}
+
+function profilePopup() {
+	$('body').removeClass('profile-popup-show');
+	$('body').addClass('profile-popup-show');
+
+    var profileClose = $('[data-close-data-popup], .background-overlay-popup');
+    profileClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('profile-popup-show')) {
+            $('body').removeClass('profile-popup-show');
+        }
+    });
+
+    return false;
+}
+
+function addressPopup() {
+	$('body').removeClass('address-popup-show');
+	$('body').addClass('address-popup-show');
+
+    var profileClose = $('[data-close-data-popup], .background-overlay-popup');
+    profileClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('address-popup-show')) {
+            $('body').removeClass('address-popup-show');
+        }
+    });
+
+    return false;
+}
+
+function passwordPopup() {
+	$('body').removeClass('password-popup-show');
+	$('body').addClass('password-popup-show');
+
+    var profileClose = $('[data-close-data-popup], .background-overlay-popup');
+    profileClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('password-popup-show')) {
+            $('body').removeClass('password-popup-show');
+        }
+    });
+
+    return false;
+}
+
+function emailPopup() {
+	$('body').removeClass('email-popup-show');
+	$('body').addClass('email-popup-show');
+
+    var profileClose = $('[data-close-data-popup], .background-overlay-popup');
+    profileClose.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if ($('body').hasClass('email-popup-show')) {
+            $('body').removeClass('email-popup-show');
         }
     });
 
